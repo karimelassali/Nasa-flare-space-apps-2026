@@ -393,40 +393,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* PROJECT COVER */}
-        <section id="cover" className="scroll-mt-20 overflow-hidden bg-[#071421] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12">
-          <div aria-hidden="true" className="landing-cover-glow pointer-events-none absolute inset-x-0 h-[520px]" />
-          <div className="relative mx-auto max-w-[1120px]">
-            <LandingReveal>
-              <div className="mb-7 flex flex-col justify-between gap-4 sm:mb-9 sm:flex-row sm:items-end">
-                <div>
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.17em] text-orange-200/85">
-                    THE FLARE PROJECT · PYROSHIELD ZERO-G
-                  </p>
-                  <h2 className="landing-h2 mt-3 text-white">The project, at a glance.</h2>
-                </div>
-                <p className="max-w-[360px] text-[12px] leading-6 text-slate-400">
-                  Our cover brings the challenge, the team, and the microgravity fire-safety mission together.
-                </p>
-              </div>
-              <figure className="landing-cover-frame overflow-hidden rounded-[22px] border border-white/15 bg-[#0B1A28] p-1.5 shadow-[0_35px_100px_rgba(0,0,0,0.48)] sm:rounded-[30px] sm:p-2.5">
-                <Image
-                  src="/splash.png"
-                  alt="FLARE project cover showing the NASA Space Apps Challenge 2026 identity, the FLARE microgravity fire-safety mark, and Earth from orbit."
-                  width={1536}
-                  height={1024}
-                  sizes="(max-width: 1120px) 100vw, 1120px"
-                  className="h-auto w-full rounded-[16px] sm:rounded-[22px]"
-                />
-              </figure>
-              <figcaption className="mt-4 flex flex-col justify-between gap-1 px-1 font-mono text-[9px] uppercase tracking-[0.1em] text-slate-500 sm:flex-row sm:items-center">
-                <span>FLARE · Microgravity Fire Safety Intelligence</span>
-                <span>PyroShield Zero-G · NASA Space Apps 2026</span>
-              </figcaption>
-            </LandingReveal>
-          </div>
-        </section>
-
         {/* INSIDE */}
         <section id="inside" className="scroll-mt-20 bg-[#F2F6F9] px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <div className="mx-auto max-w-[1150px]">
@@ -799,6 +765,40 @@ export default function LandingPage() {
               </div>
             </div>
           </LandingReveal>
+        </section>
+
+        {/* PROJECT COVER — closing visual before the footer */}
+        <section id="cover" className="relative scroll-mt-20 overflow-hidden bg-[#071421] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12">
+          <div aria-hidden="true" className="landing-cover-glow pointer-events-none absolute inset-x-0 h-[520px]" />
+          <div className="relative mx-auto max-w-[1120px]">
+            <LandingReveal>
+              <div className="mb-7 flex flex-col justify-between gap-4 sm:mb-9 sm:flex-row sm:items-end">
+                <div>
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.17em] text-orange-200/85">
+                    THE FLARE PROJECT · PYROSHIELD ZERO-G
+                  </p>
+                  <h2 className="landing-h2 mt-3 text-white">The project, at a glance.</h2>
+                </div>
+                <p className="max-w-[360px] text-[12px] leading-6 text-slate-400">
+                  Our cover brings the challenge, the team, and the microgravity fire-safety mission together.
+                </p>
+              </div>
+              <figure className="landing-cover-frame overflow-hidden rounded-[22px] border border-white/15 bg-[#0B1A28] p-1.5 shadow-[0_35px_100px_rgba(0,0,0,0.48)] sm:rounded-[30px] sm:p-2.5">
+                <Image
+                  src="/splash.png"
+                  alt="FLARE project cover showing the NASA Space Apps Challenge 2026 identity, the FLARE microgravity fire-safety mark, and Earth from orbit."
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 1120px) 100vw, 1120px"
+                  className="h-auto w-full rounded-[16px] sm:rounded-[22px]"
+                />
+              </figure>
+              <figcaption className="mt-4 flex flex-col justify-between gap-1 px-1 font-mono text-[9px] uppercase tracking-[0.1em] text-slate-500 sm:flex-row sm:items-center">
+                <span>FLARE · Microgravity Fire Safety Intelligence</span>
+                <span>PyroShield Zero-G · NASA Space Apps 2026</span>
+              </figcaption>
+            </LandingReveal>
+          </div>
         </section>
       </main>
 
