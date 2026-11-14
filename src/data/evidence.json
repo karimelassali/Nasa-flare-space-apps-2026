@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "EV-PSI98-01",
+    "investigationId": "PSI-98",
+    "experimentCode": "SAFFIRE-I",
+    "title": "Large-Scale Concurrent Flame Spread over SIBAL Cotton-Fiberglass Composite (Sample I-1)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-6)",
+    "material": "Cotton-Fiberglass Composite (SIBAL: 75% Cotton / 25% Fiberglass)",
+    "materialCategory": "Charring Thin Cellulosic Composite",
+    "sampleGeometry": "40.6 cm wide × 94 cm long flat panel (0.37 mm thickness, 18 mg/cm² area density)",
+    "flowConfiguration": "Concurrent forced airflow in 46 cm × 40.6 cm × 94 cm rectangular flow duct (20 cm/s)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": 100.0,
+      "airflowCms": 20.0,
+      "gravityLevel": "Microgravity"
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": 1.8,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": 420,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 16, 25, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "SAFFIRE-I Sample I-1 used a large SIBAL fabric panel in concurrent flow at 20 cm/s. The cited report lists a steady spread rate of 1.8 mm/s and a 420 s burn. The rounded atmosphere summary is 21% oxygen and 100 kPa; the source reports time-varying oxygen during the burn.",
+    "interpretation": "Research interpretation: Use this sample as a reference for concurrent spread in its documented duct and atmosphere. It does not establish how a fire will grow in a different enclosure.",
+    "evidenceLimitations": "Single vehicle flight test point (Sample I-1 concurrent, Sample I-2 opposed) inside a 46 cm high flow duct at normoxic cabin conditions (~21% O₂, 100 kPa). Does not establish behavior in elevated-oxygen reduced-pressure exploration atmospheres or unconstrained open cabin geometries.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 16, 25, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2)",
+    "links": [
+      {
+        "label": "NASA NTRS Report 20180005168 (SAFFIRE I–III Table 1)",
+        "url": "https://ntrs.nasa.gov/citations/20180005168",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS Report 20210011521 (ICES-2021-266 Table 2)",
+        "url": "https://ntrs.nasa.gov/citations/20210011521",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "conditionRange": {
+      "oxygenRangePct": [
+        21.5,
+        21.7
+      ]
+    }
+  },
+  {
+    "id": "EV-PSI99-01",
+    "investigationId": "PSI-99",
+    "experimentCode": "SAFFIRE-II",
+    "title": "Narrow-Strip Concurrent Flame Spread on SIBAL Cotton-Fiberglass (Samples II-5 & II-6)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-5)",
+    "material": "Cotton-Fiberglass Composite (SIBAL: 75% Cotton / 25% Fiberglass)",
+    "materialCategory": "Charring Thin Cellulosic Composite",
+    "sampleGeometry": "5 cm wide × 29 cm long strip (0.37 mm thickness, 18 mg/cm² area density)",
+    "flowConfiguration": "Concurrent forced flow across 9-sample card in 46 cm high Saffire duct (20 cm/s for II-5; 25 cm/s for II-6)",
+    "conditions": {
+      "oxygenPercent": 22.1,
+      "pressureKpa": 100.0,
+      "airflowCms": 20.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "airflowRangeCms": [
+        20,
+        25
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": 2.1,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": 145,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 14, 25, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix. Table 1 slide 30 reports approximately 22.1% oxygen for II-5/II-6; 21% is a nominal description, not their tabulated atmosphere."
+    },
+    "finding": "For SAFFIRE-II SIBAL Sample II-5, the report lists 2.1 mm/s concurrent flame spread and 145 s burn duration at 20 cm/s flow. These values belong to II-5, not to all nine SAFFIRE-II samples.",
+    "interpretation": "Research interpretation: Sample geometry and duct flow must be considered when comparing these narrow strips with the larger SAFFIRE samples. A spread-rate difference is not by itself an isolated airflow effect.",
+    "evidenceLimitations": "SAFFIRE-II tested all nine samples in a ~21–22.1% O₂, ~100 kPa cabin atmosphere rather than sweeping oxygen down to extinction; therefore, an exact Maximum Oxygen Concentration (MOC/LOI) value for SIBAL was not directly measured in this flight test.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 14, 25, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2)",
+    "links": [
+      {
+        "label": "NASA NTRS Report 20180005168 (SAFFIRE I–III Table 1)",
+        "url": "https://ntrs.nasa.gov/citations/20180005168",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS Report 20210011521 (ICES-2021-266 Table 2)",
+        "url": "https://ntrs.nasa.gov/citations/20210011521",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-PSI99-02",
+    "investigationId": "PSI-99",
+    "experimentCode": "SAFFIRE-II",
+    "title": "Two-Sided Thick PMMA Slab Concurrent Burning (Samples II-8 Grooved & II-9 Flat)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-5)",
+    "material": "Polymethyl Methacrylate (PMMA — Two-Sided Thick Slabs, Grooved & Flat)",
+    "materialCategory": "Non-Charring Thermoplastic Polymer",
+    "sampleGeometry": "5 cm wide × 29 cm long two-sided thick slabs (10 mm [1 cm] thickness for flat Sample II-9; structured/grooved surface for Sample II-8)",
+    "flowConfiguration": "Concurrent forced flow in Saffire multi-sample duct (20 cm/s)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": 20.0,
+      "gravityLevel": "Microgravity"
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": 600,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, Section III.D, p. 8). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "SAFFIRE-II thick PMMA samples burned near their leading edges and advanced through surface regression. The grooved Sample II-8 burned for 600 s; the companion flat Sample II-9 burned for 900 s. The numerical duration field refers only to II-8; no linear flame-spread rate is extracted.",
+    "interpretation": "Research interpretation: Inspect thick-PMMA burning separately from thin-fabric flame spread. These observations do not validate a general ignition or suppression rule.",
+    "evidenceLimitations": "Table 1 in NTRS 20180005168 does not report a single linear flame spread rate (mm/s) or explicit pressure transducer value for Samples II-8 and II-9 (referencing Note iv / companion thick-PMMA analyses), and no oxygen extinction sweep was performed.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, Section III.D, p. 8)",
+    "links": [
+      {
+        "label": "NASA NTRS Report 20180005168 (SAFFIRE I–III Table 1)",
+        "url": "https://ntrs.nasa.gov/citations/20180005168",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS Report 20210011521 (ICES-2021-266 Section III.D)",
+        "url": "https://ntrs.nasa.gov/citations/20210011521",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "conditionRange": {
+      "oxygenRangePct": [
+        21.9,
+        22.1
+      ]
+    }
+  },
+  {
+    "id": "EV-PSI99-03",
+    "investigationId": "PSI-99",
+    "experimentCode": "SAFFIRE-II",
+    "title": "Self-Extinguishment of Nomex (with PMMA Starter, Sample II-7) & Silicone Strips (Samples II-1 to II-4)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-5)",
+    "material": "Nomex Flame-Retardant Textile (with PMMA Starter) & Silicone Elastomer",
+    "materialCategory": "Flame-Retardant Aromatic Polyamide Textile",
+    "sampleGeometry": "5 cm wide × 29 cm long strips (Sample II-7: 0.37 mm × 24 cm Nomex with 0.85 mm × 5 cm PMMA starter; Samples II-1..II-4: 0.27, 0.61, 1.03, and 0.37 mm Silicone)",
+    "flowConfiguration": "Concurrent forced flow (Samples II-1..II-3, II-7) and opposed flow (Sample II-4) in Saffire duct (20 cm/s)",
+    "conditions": {
+      "oxygenPercent": 22.1,
+      "pressureKpa": null,
+      "airflowCms": 20.0,
+      "gravityLevel": "Microgravity"
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 14, 30–31, Table 1). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "SAFFIRE-II Nomex did not sustain flame propagation beyond its PMMA starter; the silicone strips had insignificant burn duration. This qualitative observation is not a measured zero flame-spread rate and does not establish nonflammability under other conditions.",
+    "interpretation": "Research interpretation: Lack of sustained spread in these samples does not certify Nomex or silicone as a fire barrier at other atmospheres, geometries, or heating conditions.",
+    "evidenceLimitations": "Tested only at ~22.1% O₂ and 20 cm/s airflow in Cygnus OA-5; does not establish the elevated-oxygen flammability threshold (MOC/LOI) where Nomex or silicone would sustain propagation.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 14, 30–31, Table 1)",
+    "links": [
+      {
+        "label": "NASA NTRS Report 20180005168 (SAFFIRE I–III Table 1)",
+        "url": "https://ntrs.nasa.gov/citations/20180005168",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-PSI100-01",
+    "investigationId": "PSI-100",
+    "experimentCode": "SAFFIRE-III",
+    "title": "Higher-Airflow Large-Scale SIBAL Concurrent & Opposed Flame Spread (Samples III-1 & III-2)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-7)",
+    "material": "Cotton-Fiberglass Composite (SIBAL: 75% Cotton / 25% Fiberglass)",
+    "materialCategory": "Charring Thin Cellulosic Composite",
+    "sampleGeometry": "40.6 cm wide × 94 cm long flat panel (0.37 mm thickness, 18 mg/cm² area density)",
+    "flowConfiguration": "Concurrent forced flow (Sample III-1) and opposed forced flow (Sample III-2) in 46 cm high Saffire duct (25 cm/s)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": 100.0,
+      "airflowCms": 25.0,
+      "gravityLevel": "Microgravity"
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": 2.3,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": 300,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 16, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "SAFFIRE-III Sample III-1 used a large SIBAL panel at 25 cm/s concurrent flow. The source lists 2.3 mm/s steady spread and 300 s burn duration. Its geometry can be compared with SAFFIRE-I, while the flow conditions differ.",
+    "interpretation": "Research interpretation: Compare the reported spread with SAFFIRE-I alongside atmosphere, geometry, and duct conditions. Two experiments do not establish a transferable ventilation-control law.",
+    "evidenceLimitations": "Tested at a single elevated flow velocity (25 cm/s) under normoxic cabin conditions (~21% O₂, 100 kPa) in a 46 cm high duct. Does not cover elevated-oxygen exploration atmospheres.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Urban et al., NTRS 20180005168 (ASGSR 2017, Slides 16, 30–31, Table 1); Urban et al., NTRS 20210011521 (ICES-2021-266, p. 8, Table 2)",
+    "links": [
+      {
+        "label": "NASA NTRS Report 20180005168 (SAFFIRE I–III Table 1)",
+        "url": "https://ntrs.nasa.gov/citations/20180005168",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS Report 20210011521 (ICES-2021-266 Table 2)",
+        "url": "https://ntrs.nasa.gov/citations/20210011521",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "conditionRange": {
+      "oxygenRangePct": [
+        21.0,
+        21.2
+      ]
+    }
+  },
+  {
+    "id": "EV-SAFFIRE-V-01",
+    "investigationId": "NTRS-SAFFIRE-V",
+    "experimentCode": "SAFFIRE-V",
+    "title": "Opposed-Flow Flame Spread Along Surface-Structured PMMA in Reduced-Pressure Enriched-O₂ (Sample V-4)",
+    "recordType": "experiment_observation",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit & Far-Field Diagnostics (Cygnus NG-14)",
+    "material": "Polymethyl Methacrylate (PMMA — Surface-Structured Thick Sample V-4)",
+    "materialCategory": "Non-Charring Thermoplastic Polymer",
+    "sampleGeometry": "200 mm long × 400 mm wide structured cast PMMA slab (10 mm base thickness with ten 3 mm-high ribs of 1–10 mm width on both sides; 16 mm total thickness)",
+    "flowConfiguration": "Opposed forced flow in 30 cm high × 45 cm wide Saffire duct (20 cm/s for 360 s, then reduced to 5 cm/s for 300 s before fan shutoff)",
+    "conditions": {
+      "oxygenPercent": 26.9,
+      "pressureKpa": 76.1,
+      "airflowCms": 20.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Eigenbrod et al., NTRS 20210017838 (ICES-2021-218, Abstract & Slides 3–11); Urban et al., NTRS 20210011521 (ICES-2021-266, Table 1 p. 3 & Section III pp. 4–10); NTRS 20210017780. Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix.",
+      "opposedFlameSpreadRate": {
+        "value": 0.88,
+        "unit": "mm/s",
+        "uncertainty": null,
+        "conditionNote": "NTRS 20210017838 abstract: up to 0.88 mm/s along the 1 mm rib, opposed flow. This is a reported maximum, not an average."
+      },
+      "forcedFlowDuration": {
+        "value": 660,
+        "unit": "s",
+        "uncertainty": null,
+        "conditionNote": "Derived sum of programmed intervals in NTRS 20210017838 abstract: 360 s at 20 cm/s plus 300 s at 5 cm/s. Not a measured burn lifetime."
+      }
+    },
+    "finding": "The SAFFIRE-V structured-PMMA abstract reports opposed flame spread up to 0.88 mm/s along a 1 mm rib at 26.9% oxygen and 76.1 kPa. Flow ran at 20 cm/s for 360 s, then 5 cm/s for 300 s. The 660 s sum is protocol duration, not a measured burn lifetime. Another report lists different atmosphere values for V-4; the discrepancy remains explicit.",
+    "interpretation": "Research interpretation: Separate the rib-spread maximum, changing airflow protocol, and differing published atmosphere reports. Do not infer an operational fan-shutdown procedure from this record.",
+    "evidenceLimitations": "Atmosphere discrepancy: NTRS 20210017838 abstract reports 26.9 vol% O2 / 76.1 kPa; NTRS 20210011521 Table 1 lists 25.7 mol% O2 / 72.6 kPa for V-4. This entry uses the former source without treating the reports as reconciled. The 34% O2 / 56.5 kPa exploration scenario is not this flight test. 0.88 mm/s is a maximum along the 1 mm rib, not an average. Flow changes during the test.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Eigenbrod et al., NTRS 20210017838 (ICES-2021-218, Abstract & Slides 3–11); Urban et al., NTRS 20210011521 (ICES-2021-266, Table 1 p. 3 & Section III pp. 4–10); NTRS 20210017780",
+    "links": [
+      {
+        "label": "NASA NTRS 20210017838 (SAFFIRE-V Structured PMMA Paper)",
+        "url": "https://ntrs.nasa.gov/citations/20210017838",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS 20210011521 (SAFFIRE IV & V ICES-2021-266 Paper)",
+        "url": "https://ntrs.nasa.gov/citations/20210011521",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS 20210017780 (SAFFIRE IV & V Presentation)",
+        "url": "https://ntrs.nasa.gov/citations/20210017780",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-PSI25-01",
+    "investigationId": "PSI-25",
+    "experimentCode": "BASS-II",
+    "title": "Low-Velocity Concurrent Flame Growth, Spread, and Quenching over SIBAL Fabric (GMT96-T7 & Matrix)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG) — Small Flow Duct",
+    "material": "Cotton-Fiberglass Composite (SIBAL: 75% Cotton / 25% Fiberglass)",
+    "materialCategory": "Charring Thin Cellulosic Composite",
+    "sampleGeometry": "2.2 cm and 1.2 cm wide × 10 cm exposed length flat strips (0.32 mm thickness, 18.2 mg/cm² area density) in 7.6 cm × 7.6 cm × 17 cm flow duct",
+    "flowConfiguration": "Concurrent forced flow inside MSG small flow duct (10 cm/s baseline test GMT96-T7; 1–53 cm/s campaign matrix)",
+    "conditions": {
+      "oxygenPercent": 21.0,
+      "pressureKpa": 101.3,
+      "airflowCms": 10.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "oxygenRangePct": [
+        16.4,
+        21.0
+      ],
+      "pressureRangeKpa": [
+        101.3,
+        101.3
+      ],
+      "airflowRangeCms": [
+        1.0,
+        53.0
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Zhao, T'ien, Ferkul, and Olson, NTRS 20150008962 (9th U.S. National Combustion Meeting, 2015, pp. 1–9); Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 7.0, pp. 93–101 & Appendix A.6, pp. 112–114). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "BASS-II SIBAL tests showed limiting flame lengths and low-speed quenching in a small ISS duct. This record uses the documented GMT96-T7 baseline conditions (21% oxygen, 101.3 kPa, 10 cm/s). No numerical spread-rate value is extracted from the plotted curve.",
+    "interpretation": "Research interpretation: The low-flow behavior is relevant to small-duct research. The plotted campaign results cannot supply a missing scalar spread rate for an arbitrary cabin setting.",
+    "evidenceLimitations": "Short 10 cm sample length limited the duration of steady spread at higher velocities, and the velocity-stepping procedure could not resolve the flat bottom minimum-oxygen boundary below 16.4% O₂ (NTRS 20150008962 Section 3, p. 7). Exact numeric spread-rate values from Figure 4 are not tabulated as text in the report.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Zhao, T'ien, Ferkul, and Olson, NTRS 20150008962 (9th U.S. National Combustion Meeting, 2015, pp. 1–9); Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 7.0, pp. 93–101 & Appendix A.6, pp. 112–114)",
+    "links": [
+      {
+        "label": "NASA NTRS 20150008962 (BASS/BASS-II SIBAL Concurrent Flow Paper)",
+        "url": "https://ntrs.nasa.gov/citations/20150008962",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA/TM-20210011385 (BASS-II Summary Report Section 7.0)",
+        "url": "https://ntrs.nasa.gov/citations/20210011385",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-PSI25-02",
+    "investigationId": "PSI-25",
+    "experimentCode": "BASS-II",
+    "title": "Microgravity Flammability Boundary for Cast PMMA Rods in Axial Stagnation Flow (Section 6.1)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG) — Small Flow Duct",
+    "material": "Polymethyl Methacrylate (PMMA — Clear and Black Cast Cylindrical Rods)",
+    "materialCategory": "Non-Charring Thermoplastic Polymer",
+    "sampleGeometry": "6.35 mm, 9.52 mm, and 12.7 mm diameter (radii 0.318, 0.476, and 0.635 cm) × 5.9 cm initial length cylindrical rods with hemispherical stagnation tips",
+    "flowConfiguration": "Axial stagnation / concurrent forced flow (0–55 cm/s, ±0.5 cm/s resolution) in 7.6 × 7.6 × 17 cm MSG flow duct",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "oxygenRangePct": [
+        13.6,
+        22.2
+      ],
+      "airflowRangeCms": [
+        0.0,
+        55.0
+      ]
+    },
+    "measurements": {
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 6.1, pp. 64–92 & Appendix A.5, pp. 110–111). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix.",
+      "rodTipRegressionRate": {
+        "value": 0.0385,
+        "unit": "mm/s",
+        "uncertainty": null,
+        "conditionNote": "NTRS 20210011385, printed p. 69, Fig. 6.4: PMMA rod radius 0.476 cm; oxygen decreased from 14.8% to 13.6%; flow stepped down to 1.5 cm/s. Rod-tip regression, not flame-front spread."
+      },
+      "minimumOxygenBoundary": {
+        "value": 13.5,
+        "unit": "% O₂",
+        "uncertainty": null,
+        "conditionNote": "NTRS 20210011385, pp. 75–76, Eq. 6.1/Figs. 6.9–6.10: minimum of a multi-test flammability boundary; not the oxygen condition for the regression-rate measurement and not a cabin safety threshold."
+      }
+    },
+    "finding": "BASS-II PMMA rods exhibited a steady rod-tip regression velocity of 0.0385 mm/s in the quenching test described on page 69. Separately, the fitted multi-test flammability boundary reached a minimum oxygen concentration of 13.5%. These are distinct quantities and scopes; 13.5% is not the setpoint for the regression measurement or a safe cabin setting.",
+    "interpretation": "Research interpretation: Keep a multi-test flammability boundary separate from a single rod-regression observation. Neither quantity is a safe-oxygen limit for a spacecraft.",
+    "evidenceLimitations": "Flammability boundary combines tests across three rod radii (normalized by stretch rate a) in a 250-L MSG volume where O₂ gradually depleted during burns up to 28 min; Vr = 0.0385 mm/s is the rod tip bulk regression velocity in the 14.8% -> 13.6% O₂ quenching test rather than a thin-sheet surface spread rate.",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 6.1, pp. 64–92 & Appendix A.5, pp. 110–111)",
+    "links": [
+      {
+        "label": "NASA/TM-20210011385 (BASS-II Summary Report Section 6.1)",
+        "url": "https://ntrs.nasa.gov/citations/20210011385",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-PSI69-01",
+    "investigationId": "PSI-69",
+    "experimentCode": "FLEX",
+    "title": "Spherically Symmetric n-Heptane Droplet Combustion in Cabin Air (Test FLEX-008 & Campaign)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — Multi-User Droplet Combustion Apparatus (MDCA)",
+    "material": "n-Heptane (C₇H₁₆ Liquid Fuel Droplet)",
+    "materialCategory": "Liquid Hydrocarbon Fuel Droplet",
+    "sampleGeometry": "2–5 mm initial diameter free-floating and 80-µm fiber-supported spherical droplets (Test FLEX-008: 2.95 mm ± 0.05 mm initial diameter free-floating n-heptane droplet)",
+    "flowConfiguration": "Quiescent microgravity chamber (90-L CIR chamber; 0 cm/s forced flow for free-floating droplets)",
+    "conditions": {
+      "oxygenPercent": 21.0,
+      "pressureKpa": 101.6,
+      "airflowCms": 0.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Dietrich et al., NASA/TP-2015-216046 (NTRS 20150023456, Executive Summary p. 1, Section 3.1.2 p. 8, Table I p. 9, Table V p. 12, Section 5.2 p. 16, Table IX p. 20). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix. Table IX identifies FLEX-008 test end as Disruption. The 14.8 s interval is not an extinction time.",
+      "dropletBurnDuration": {
+        "value": 14.8,
+        "unit": "s",
+        "uncertainty": null
+      }
+    },
+    "finding": "In FLEX test FLEX-008 (30CAL06), a free-floating n-heptane droplet in cabin air burned for 14.8 s. The report lists 21% oxygen, 762.4 mmHg (approximately 101.6 kPa), initial diameter 2.95 mm, and a mean squared-diameter burning constant of 0.79 mm²/s. Droplet regression is not solid flame spread. Table IX records the test ending by droplet disruption, not extinction.",
+    "interpretation": "Research interpretation: Droplet burn duration is a different physical quantity from solid-material flame spread. FLEX-008 ended in droplet disruption; its duration is not an extinction threshold.",
+    "evidenceLimitations": "Early FLEX tests (including FLEX-001 through FLEX-009) experienced trace fuel-needle conformal coating (Dow Corning 3140 RTV) contamination that minimally affected average burning-rate constants (K) and flame sizes but may have contributed to late-burn droplet disruption (Section 5.2, p. 16). Droplet burning-rate constants (mm²/s) cannot be directly compared to solid linear flame spread rates (mm/s).",
+    "source": "NASA NTRS / PSI",
+    "sourceDocument": "Dietrich et al., NASA/TP-2015-216046 (NTRS 20150023456, Executive Summary p. 1, Section 3.1.2 p. 8, Table I p. 9, Table V p. 12, Section 5.2 p. 16, Table IX p. 20)",
+    "links": [
+      {
+        "label": "NASA/TP-2015-216046 (NTRS 20150023456 FLEX Detailed Results)",
+        "url": "https://ntrs.nasa.gov/citations/20150023456",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-ACME-BRE-01",
+    "investigationId": "NTRS-ACME-BRE",
+    "experimentCode": "ACME-BRE",
+    "title": "Emulation of Condensed-Phase Fuel Flames Using a Burning Rate Emulator (BRE) in Microgravity",
+    "recordType": "investigation_overview",
+    "platform": "Drop Tower / Ground Analog",
+    "facility": "NASA Glenn Zero Gravity Facility (ground drop tests)",
+    "material": "Gaseous Methane (CH₄) & Ethylene (C₂H₄, Pure and N₂-Diluted) Emulating Condensed Fuels (PMMA, POM, Heptane, Methanol)",
+    "materialCategory": "Non-Charring Thermoplastic Polymer",
+    "sampleGeometry": "25 mm and 50 mm diameter circular porous gas-fueled burners with perforated outlet plates and heat-flux sensors",
+    "flowConfiguration": "Quiescent microgravity chamber (burner fuel mass flux 3.5–12.7 g/m²s; 0 cm/s external ambient airflow)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": 0.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "oxygenRangePct": [
+        21.0,
+        30.0
+      ],
+      "pressureRangeKpa": [
+        50.7,
+        101.3
+      ],
+      "airflowRangeCms": [
+        0.0,
+        0.0
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Markan, Quintiere, Sunderland, de Ris, and Stocker, NTRS 20170009141 (10th U.S. National Combustion Meeting, 2017, pp. 1–6); Markan et al., NTRS 20160010073 (ASGSR 2015, Slides 1–10). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "The cited BRE study used circular gas burners to emulate condensed-fuel burning during short-duration microgravity drop tests. It discusses transient flame and surface-heat-flux behavior. These ground-facility results are not a single ISS flight measurement.",
+    "interpretation": "Research interpretation: This ground study informs burner-emulation research. It does not establish a measured ISS operating point or a validated condensed-material prediction.",
+    "evidenceLimitations": "Overview record summarizing a 53-test parameter matrix (21–30% O₂, 50.7–101.3 kPa) in 5.18 s drop-tower microgravity prior to long-duration ISS CIR runs; parameter ranges do not imply that every intermediate combination was tested, and gas-burner emulation omits char formation and melt-bubbling mechanics.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Markan, Quintiere, Sunderland, de Ris, and Stocker, NTRS 20170009141 (10th U.S. National Combustion Meeting, 2017, pp. 1–6); Markan et al., NTRS 20160010073 (ASGSR 2015, Slides 1–10)",
+    "links": [
+      {
+        "label": "NASA NTRS 20170009141 (BRE in Microgravity Paper)",
+        "url": "https://ntrs.nasa.gov/citations/20170009141",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS 20160010073 (BRE ASGSR Presentation)",
+        "url": "https://ntrs.nasa.gov/citations/20160010073",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-SOFIE-MIST-01",
+    "investigationId": "NTRS-SOFIE-MIST",
+    "experimentCode": "SoFIE-MIST",
+    "title": "Material Ignition and Suppression Test (MIST) in Space Exploration Atmospheres (SoFIE Overview)",
+    "recordType": "investigation_overview",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — SoFIE Insert & MIST Apparatus",
+    "material": "Polymethyl Methacrylate (PMMA — Cast Cylindrical Rods, Black Type-G & Clear)",
+    "materialCategory": "Non-Charring Thermoplastic Polymer",
+    "sampleGeometry": "Cylindrical cast PMMA rods (12.7 mm diameter × 150–154 mm length) centered in a 70 mm ID quartz flow tube with three equispaced halogen radiant heaters (up to 40 kW/m²) and downstream Kanthal wire pilot",
+    "flowConfiguration": "Axial forced oxidizer flow (10–100 cm/s) with external radiant heating (up to 40 kW/m²) in SoFIE/MIST cylindrical duct",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "oxygenRangePct": [
+        14.0,
+        30.0
+      ],
+      "airflowRangeCms": [
+        10.0,
+        100.0
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Ferkul et al., NTRS 20200000361 (ASGSR 2019, Slides 3–5, 11–16); Fernandez-Pello, NTRS 20150023467 (NASA Grant NNX10AE01G Summary of Research, 2013, pp. 1–13). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "The SoFIE-MIST sources describe an apparatus and research program for ignition of radiantly heated PMMA rods. This entry combines project specifications and earlier research; it does not report a single flight test or a validated ignition prediction for user-selected settings.",
+    "interpretation": "Research interpretation: Apparatus specifications and research objectives guide literature review; they do not establish an observed flight-test outcome at a selected atmosphere.",
+    "evidenceLimitations": "Investigation overview record combining ISS SoFIE hardware specifications (NTRS 20200000361, 22 MIST rod samples) with MIST baseline experimental and FDS-DNS modeling results (NTRS 20150023467); broad apparatus capability ranges (14–30% O₂, 10–100 cm/s) do not represent a single flight test point.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Ferkul et al., NTRS 20200000361 (ASGSR 2019, Slides 3–5, 11–16); Fernandez-Pello, NTRS 20150023467 (NASA Grant NNX10AE01G Summary of Research, 2013, pp. 1–13)",
+    "links": [
+      {
+        "label": "NASA NTRS 20200000361 (SoFIE Project on ISS)",
+        "url": "https://ntrs.nasa.gov/citations/20200000361",
+        "type": "NTRS"
+      },
+      {
+        "label": "NASA NTRS 20150023467 (MIST in Space Exploration Atmospheres)",
+        "url": "https://ntrs.nasa.gov/citations/20150023467",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-SAFFIRE-IV-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-SAFFIRE-IV",
+    "investigationName": "SAFFIRE-IV",
+    "experimentTitle": "Large-Scale Cygnus Fire Heat Release & Far-Field Combustion Products (SAFFIRE-IV Overview)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit & Far-Field Diagnostics (Cygnus NG-13)",
+    "material": "Solid spacecraft materials (large-scale Cygnus cargo fire)",
+    "materialCategory": "Solid Spacecraft Materials",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "A Cygnus model for SAFFIRE-IV used temperatures near the payload outlet to estimate heat release and compared predicted downstream gas transport with experiment measurements. This record summarizes model development, not a numerical validation dataset.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Brooker & Niehaus, NTRS 20220002714 (2022); Urban et al., NTRS 20240002981 (ICES-2024-365)",
+    "links": [
+      {
+        "label": "NASA NTRS 20220002714 (SAFFIRE-IV Modeling)",
+        "url": "https://ntrs.nasa.gov/citations/20220002714",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-SAFFIRE-VI-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-SAFFIRE-VI",
+    "investigationName": "SAFFIRE-VI",
+    "experimentTitle": "Final Large-Scale Cygnus Spacecraft Fire Experiment (SAFFIRE-VI Overview)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus)",
+    "material": "Cotton/fiberglass (50 cm), 1 cm & 0.5 cm PMMA (18 cm), Nomex (7 cm) — all 41 cm wide",
+    "materialCategory": "Solid Polymers & Spacecraft Fabrics",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The preliminary SAFFIRE-VI report describes spacecraft-scale fire tests. The reported cabin temperature and pressure changes were less significant than the increases in carbon dioxide and carbon monoxide. Individual gas concentration measurements are not extracted here.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Urban et al., NTRS 20240002981 (ICES-2024-365, 2024)",
+    "links": [
+      {
+        "label": "NASA NTRS 20240002981 (SAFFIRE-VI Preliminary Results)",
+        "url": "https://ntrs.nasa.gov/citations/20240002981",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-BASS-I-01",
+    "recordType": "investigation_overview",
+    "investigationId": "PSI-25-BASS1",
+    "investigationName": "BASS-I",
+    "experimentTitle": "Burning and Suppression of Solids I (BASS-I Program Overview)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "material": "Thin/thick flat solids, acrylic slabs, spheres, and cylinders",
+    "materialCategory": "Solid Polymers & Spacecraft Fabrics",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The cited BASS-II report includes earlier BASS-I results. It describes flames sensitive to airflow from 0 to 5 cm/s, with dim blue flames sustained below 1 cm/s that can intensify when airflow increases. The abstract does not assign this behavior to a specific BASS-I test.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Ferkul et al., NTRS 20160000593 (2014)",
+    "links": [
+      {
+        "label": "NASA NTRS 20160000593 (BASS-I/II Results)",
+        "url": "https://ntrs.nasa.gov/citations/20160000593",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "fuelType": "Mixed / Other"
+  },
+  {
+    "id": "EV-FLEX-2-01",
+    "recordType": "investigation_overview",
+    "investigationId": "PSI-FLEX2",
+    "investigationName": "FLEX-2",
+    "experimentTitle": "Multi-Component Droplet Combustion Research (FLEX-2 Overview)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — MDCA",
+    "material": "Multi-component liquid hydrocarbon/alcohol droplets",
+    "materialCategory": "Liquid Droplet",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "FLEX-2 studies liquid droplets, including fuel mixtures, imposed flow, and interactions between droplets. The linked NASA overview describes research objectives; it does not provide an individual test measurement in this record.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "NASA Glenn ISS Payload Operations Center — FLEX-2 Overview",
+    "links": [
+      {
+        "label": "NASA Glenn FLEX-2 overview",
+        "url": "https://gipoc.grc.nasa.gov/wp/fcf-cir/flex-2/",
+        "type": "NASA"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-ACME-EF-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-ACME-EFIELD",
+    "investigationName": "ACME-EFIELD",
+    "experimentTitle": "Electric-Field Effects on Laminar Gaseous Diffusion Flames (ACME E-FIELD Overview)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "Gaseous fuel diffusion flames with an applied electric field",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The ACME overview reports electric-field experiments using coflow and gas-jet burners with a downstream electrode at either polarity up to 10 kV. The overview does not quantify a resulting change in flame stability or suppression.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20220015583 (2023); Stocker et al., NTRS 20140009169 (2014)",
+    "links": [
+      {
+        "label": "NASA NTRS 20220015583 (ACME Overview)",
+        "url": "https://ntrs.nasa.gov/citations/20220015583",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-ACME-FD-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-ACME-FLAME-DESIGN",
+    "investigationName": "ACME-FLAME-DESIGN",
+    "experimentTitle": "Flame Design Research (ACME Overview)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "Gaseous fuel in a coaxial coflow burner",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The ACME overview describes experiments on highly sooting and highly diluted gaseous flames using a coaxial coflow burner. It does not supply an individual extinction threshold in this record.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20220015583 (2023); Stocker et al., NTRS 20140009169 (2014)",
+    "links": [
+      {
+        "label": "NASA NTRS 20220015583 (ACME Overview)",
+        "url": "https://ntrs.nasa.gov/citations/20220015583",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-ACME-SF-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-ACME-SFLAMES",
+    "investigationName": "ACME-S-FLAMES",
+    "experimentTitle": "Spherical Diffusion Flame Structure and Response (ACME S-Flames Overview)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "Gaseous hydrocarbon fuels on porous spherical burner",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The ACME overview describes porous spherical burners used to study soot processes and flame dynamics with approximately one-dimensional flame structure. No individual test conditions are extracted here.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20220015583 (2023)",
+    "links": [
+      {
+        "label": "NASA NTRS 20220015583 (ACME Overview)",
+        "url": "https://ntrs.nasa.gov/citations/20220015583",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-ACME-CFIG-01",
+    "recordType": "investigation_overview",
+    "investigationId": "PSI-159",
+    "investigationName": "ACME-CFI-G",
+    "experimentTitle": "Cool Flames Investigation with Gases (ACME CFI-G / PSI-159 Overview)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "Gaseous alkane fuels (porous spherical burner)",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The ACME overview describes low-temperature combustion studies using porous spherical burners. This record does not establish a numerical extinction limit or a specific hot-to-cool transition measurement.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20220015583 (2023); NASA PSI-159",
+    "links": [
+      {
+        "label": "NASA NTRS 20220015583 (ACME Overview)",
+        "url": "https://ntrs.nasa.gov/citations/20220015583",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-SPICE-01",
+    "recordType": "investigation_overview",
+    "investigationId": "PSI-60",
+    "investigationName": "SPICE",
+    "experimentTitle": "Laminar Smoke Point and Soot Emission Onset in Coflow (SPICE / PSI-60 Overview)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "material": "Gaseous jet diffusion flames (hydrocarbon fuels)",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The SPICE source describes planned measurements of soot-emission onset, flame shapes, stabilization heights, and temperature fields in coflowing gas-jet flames. Research objectives are not completed experimental results.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Urban, Sunderland, & Yuan, NTRS 20090014827 (2009)",
+    "links": [
+      {
+        "label": "NASA NTRS 20090014827 (SPICE)",
+        "url": "https://ntrs.nasa.gov/citations/20090014827",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-SAME-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-SAME",
+    "investigationName": "SAME",
+    "experimentTitle": "Microgravity Smoke Particle Morphology & Size Distribution (SAME / SAME-2 Overview)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "material": "Teflon, Kapton, cotton, silicone rubber, and Pyrell foam (pyrolysis below ignition)",
+    "materialCategory": "Solid Polymers & Spacecraft Fabrics",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "airflowRangeCms": [
+        0,
+        8
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "SAME-2 heated Teflon, Kapton, cotton, silicone rubber, and Pyrell below ignition. Reported study ranges were 0–8 cm/s airflow and 11–1800 s smoke aging. Most average particle sizes were 200–400 nm; some quiescent cases produced larger particles. These are aggregate ranges, not a single test.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Urban et al., NTRS 20130000422 (2012)",
+    "links": [
+      {
+        "label": "NASA NTRS 20130000422 (SAME-2)",
+        "url": "https://ntrs.nasa.gov/citations/20130000422",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "fuelType": "Mixed / Other"
+  },
+  {
+    "id": "EV-SLICE-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-SLICE",
+    "investigationName": "SLICE",
+    "experimentTitle": "Soot Formation & Liftoff in Microgravity Coflow Jet Flames (SLICE Overview)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "material": "Methane (CH4) coflow jet diffusion flames",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The SLICE study compared methane coflow flames in microgravity and normal gravity. Microgravity cases had lower soot temperatures, higher soot volume fractions, and soot distributed more toward the flame wings. No numerical soot value is extracted here.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Ma, Cao, Giassi, Stocker, & Takahashi, NTRS 20140017780 (2014)",
+    "links": [
+      {
+        "label": "NASA NTRS 20140017780 (SLICE)",
+        "url": "https://ntrs.nasa.gov/citations/20140017780",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-LSP-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-LSP",
+    "investigationName": "LSP",
+    "experimentTitle": "Laminar Soot Processes in Non-Buoyant Diffusion Flames (LSP Overview)",
+    "platform": "Space Shuttle",
+    "facility": "Space Shuttle Columbia (STS-83 / STS-94)",
+    "material": "Gaseous hydrocarbon laminar non-premixed (diffusion) flames",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "The LSP report describes measurements of soot concentrations, flame shapes, smoke points, and flame structure from laminar diffusion flames on two Space Shuttle Columbia flights. Only the public abstract was reviewed; no full text is available at the linked NTRS record.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Lin, Dai, & Faeth, NTRS 19990053996 (1999)",
+    "links": [
+      {
+        "label": "NASA NTRS 19990053996 (LSP)",
+        "url": "https://ntrs.nasa.gov/citations/19990053996",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14"
+  },
+  {
+    "id": "EV-DAFT-01",
+    "recordType": "investigation_overview",
+    "investigationId": "NTRS-DAFT",
+    "investigationName": "DAFT",
+    "experimentTitle": "Microgravity Condensation Nuclei Counter Feasibility Test (DAFT Overview)",
+    "platform": "ISS",
+    "facility": "International Space Station (ISS)",
+    "material": "Aerosols for instrument evaluation; no combustible specimen",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "Not extracted from the reviewed source.",
+    "flowConfiguration": null,
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "Overview only. See the source-linked finding for supported research scope; unextracted or unsupported single-test measurements remain null."
+    },
+    "finding": "DAFT was designed to assess whether the P-Trak particle counter could operate in long-duration microgravity for SAME. The source describes a 20 nm particle-counting capability and alcohol recycling inside the instrument; it does not report a combustion test or establish successful flight qualification.",
+    "interpretation": "Research context: this source can help identify follow-up experiments and relevant diagnostics. Its overview alone does not establish transferable numerical limits or operating procedures.",
+    "evidenceLimitations": "Source scope: public abstract or NASA overview. Campaign ranges are not a paired test matrix. Unreported conditions remain null; current mission status and full numerical results require the original reports.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Sheredy, NTRS 20050215648 (Research and Technology 2004, 2005)",
+    "links": [
+      {
+        "label": "NASA NTRS 20050215648 (DAFT)",
+        "url": "https://ntrs.nasa.gov/citations/20050215648",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-14",
+    "fuelType": "Not applicable"
+  }
+]

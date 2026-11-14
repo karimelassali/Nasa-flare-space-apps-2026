@@ -1,0 +1,362 @@
+{
+  "EV-PSI98-01": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "NTRS 20180005168, Table 1, slides 30–31",
+    "reviewedAt": "2026-11-14",
+    "scope": "Sample geometry, oxygen variation, airflow and retained measurements checked against Table 1. Other metadata retains its prior report review. Source rounding is not a measured uncertainty."
+  },
+  "EV-PSI99-01": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "NTRS 20180005168, Table 1, slides 30–31",
+    "reviewedAt": "2026-11-14",
+    "scope": "Sample geometry, oxygen variation, airflow and retained measurements checked against Table 1. Other metadata retains its prior report review. Source rounding is not a measured uncertainty."
+  },
+  "EV-PSI99-02": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "NTRS 20180005168, Table 1, slides 30–31",
+    "reviewedAt": "2026-11-14",
+    "scope": "Sample geometry, oxygen variation, airflow and retained measurements checked against Table 1. Other metadata retains its prior report review. Source rounding is not a measured uncertainty."
+  },
+  "EV-PSI99-03": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "NTRS 20180005168, Table 1, slides 30–31",
+    "reviewedAt": "2026-11-14",
+    "scope": "Sample geometry, oxygen variation, airflow and retained measurements checked against Table 1. Other metadata retains its prior report review. Source rounding is not a measured uncertainty."
+  },
+  "EV-PSI100-01": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "NTRS 20180005168, Table 1, slides 30–31",
+    "reviewedAt": "2026-11-14",
+    "scope": "Sample geometry, oxygen variation, airflow and retained measurements checked against Table 1. Other metadata retains its prior report review. Source rounding is not a measured uncertainty."
+  },
+  "EV-SAFFIRE-V-01": {
+    "level": "prior_report_audit",
+    "label": "Report review on file",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210017838",
+    "locator": "Eigenbrod et al., NTRS 20210017838 (ICES-2021-218, Abstract & Slides 3–11); Urban et al., NTRS 20210011521 (ICES-2021-266, Table 1 p. 3 & Section III pp. 4–10); NTRS 20210017780",
+    "reviewedAt": "2026-11-14",
+    "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+  },
+  "EV-PSI25-01": {
+    "level": "prior_report_audit",
+    "label": "Report review on file",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20150008962",
+    "locator": "Zhao, T'ien, Ferkul, and Olson, NTRS 20150008962 (9th U.S. National Combustion Meeting, 2015, pp. 1–9); Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 7.0, pp. 93–101 & Appendix A.6, pp. 112–114)",
+    "reviewedAt": "2026-11-14",
+    "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+  },
+  "EV-PSI25-02": {
+    "level": "prior_report_audit",
+    "label": "Report review on file",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210011385",
+    "locator": "Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 6.1, pp. 64–92 & Appendix A.5, pp. 110–111)",
+    "reviewedAt": "2026-11-14",
+    "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+  },
+  "EV-PSI69-01": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456",
+    "locator": "NASA/TP-2015-216046, printed p. 20 (PDF p. 26), Table IX, FLEX-008",
+    "reviewedAt": "2026-11-14",
+    "scope": "FLEX-008 fuel, composition, pressure, droplet diameter, burn duration and Disruption end condition rechecked. Ancillary apparatus metadata retains its prior report review."
+  },
+  "EV-ACME-BRE-01": {
+    "level": "prior_report_audit",
+    "label": "Report review on file",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20170009141",
+    "locator": "Markan, Quintiere, Sunderland, de Ris, and Stocker, NTRS 20170009141 (10th U.S. National Combustion Meeting, 2017, pp. 1–6); Markan et al., NTRS 20160010073 (ASGSR 2015, Slides 1–10)",
+    "reviewedAt": "2026-11-14",
+    "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+  },
+  "EV-SOFIE-MIST-01": {
+    "level": "prior_report_audit",
+    "label": "Report review on file",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20200000361",
+    "locator": "Ferkul et al., NTRS 20200000361 (ASGSR 2019, Slides 3–5, 11–16); Fernandez-Pello, NTRS 20150023467 (NASA Grant NNX10AE01G Summary of Research, 2013, pp. 1–13)",
+    "reviewedAt": "2026-11-14",
+    "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+  },
+  "EV-SAFFIRE-IV-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220002714",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-SAFFIRE-VI-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20240002981",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-BASS-I-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20160000593",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-FLEX-2-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://gipoc.grc.nasa.gov/wp/fcf-cir/flex-2/",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-ACME-EF-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-ACME-FD-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-ACME-SF-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-ACME-CFIG-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-SPICE-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20090014827",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-SAME-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20130000422",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-SLICE-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20140017780",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-LSP-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/19990053996",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "EV-DAFT-01": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20050215648",
+    "locator": "NASA public abstract / overview",
+    "reviewedAt": "2026-11-14",
+    "scope": "Overview claims checked in this remediation; no individual measurements inferred."
+  },
+  "PSI-98": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-99": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-100": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SAFFIRE-V": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210011521",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-25": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210011385",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-69": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-ACME-BRE": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20170009141",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SOFIE-MIST": {
+    "level": "prior_report_audit",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20200000361",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SAFFIRE-IV": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220002714",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SAFFIRE-VI": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20240002981",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-25-BASS1": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20160000593",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-FLEX2": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://gipoc.grc.nasa.gov/wp/fcf-cir/flex-2/",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-ACME-EFIELD": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-ACME-FLAME-DESIGN": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-ACME-SFLAMES": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-159": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "PSI-60": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20090014827",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SAME": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20130000422",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-SLICE": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20140017780",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-LSP": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/19990053996",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "NTRS-DAFT": {
+    "level": "abstract_reviewed",
+    "label": "Overview provenance",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20050215648",
+    "locator": "Investigation summary; see linked evidence audit",
+    "reviewedAt": "2026-11-14",
+    "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  }
+}

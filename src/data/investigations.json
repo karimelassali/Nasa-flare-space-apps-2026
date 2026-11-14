@@ -1,0 +1,233 @@
+[
+  {
+    "id": "PSI-98",
+    "code": "SAFFIRE-I",
+    "title": "Spacecraft Fire Experiment I (SAFFIRE-I)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-6)",
+    "summary": "Investigated large-scale concurrent and opposed-flow flame spread and growth over a 0.406 m × 0.94 m cotton-fiberglass (SIBAL, 75% cotton / 25% fiberglass) composite fabric panel inside an unmanned Cygnus cargo spacecraft (OA-6) at 20 cm/s airflow after ISS unberthing (NTRS 20180005168; NTRS 20210011521).",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-99",
+    "code": "SAFFIRE-II",
+    "title": "Spacecraft Fire Experiment II (SAFFIRE-II)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-5)",
+    "summary": "Evaluated microgravity material flammability and flame spread across nine 5 cm × 29 cm sample strips (four silicone samples with different thicknesses and flow directions, cotton-fiberglass SIBAL fabric at 20 and 25 cm/s, Nomex with a PMMA starter, and flat and grooved two-sided thick PMMA slabs) inside an unmanned Cygnus spacecraft (OA-5) after ISS unberthing (NTRS 20180005168; NTRS 20210011521).",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "recordCount": 3
+  },
+  {
+    "id": "PSI-100",
+    "code": "SAFFIRE-III",
+    "title": "Spacecraft Fire Experiment III (SAFFIRE-III)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus OA-7)",
+    "summary": "Examined large-scale cotton-fiberglass (SIBAL, 0.406 m × 0.94 m) concurrent and opposed flame spread at 25 cm/s forced airflow in Cygnus (OA-7) to quantify flow velocity scaling relative to SAFFIRE-I (NTRS 20180005168; NTRS 20210011521).",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20180005168",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SAFFIRE-V",
+    "code": "SAFFIRE-V",
+    "title": "Spacecraft Fire Experiment V (SAFFIRE-V)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit & Far-Field Diagnostics (Cygnus NG-14)",
+    "summary": "Conducted large-scale spacecraft fire growth, extinction, and far-field smoke/gas transport experiments inside Cygnus (NG-14, January 2021) at reduced pressure and elevated oxygen (reported as 25.4–26.2 mol% O₂ and 70.7–72.6 kPa across Samples V-2, V-3, and V-4 in NTRS 20210011521 Table 1, and 26.9 vol% O₂ at 761 hPa [76.1 kPa] for structured PMMA Sample V-4 in NTRS 20210017838). Note: 34% O₂ / 56.5 kPa (8.2 psia) is a NASA exploration atmosphere planning reference (NTRS 20170000230), not an established SAFFIRE-V flight test condition.",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210011521",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-25",
+    "code": "BASS-II",
+    "title": "Burning and Suppression of Solids II (BASS-II)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "summary": "Studied solid fuel ignition, concurrent and opposed flame spread, PMMA rod stagnation-flow flammability boundaries, and low-velocity radiative quenching across 13.6–22.2% O₂ (via N₂ dilution) and 0–55 cm/s forced flow inside the ISS Microgravity Science Glovebox small flow duct (7.6 × 7.6 × 17 cm) (NTRS 20210011385; NTRS 20150008962).",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210011385",
+    "recordCount": 2
+  },
+  {
+    "id": "PSI-69",
+    "code": "FLEX",
+    "title": "Flame Extinguishment Experiment (FLEX)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — MDCA",
+    "summary": "NASA/TP-2015-216046 describes the FLEX droplet-combustion apparatus, diagnostics, analysis methods, and results from 284 tests. Methanol and n-heptane were investigated in the ISS Combustion Integrated Rack. Test outcomes distinguish extinction, completion, and disruption.",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-ACME-BRE",
+    "code": "ACME-BRE",
+    "title": "Burning Rate Emulator (BRE) Microgravity Studies (ISS Research Program / Glenn 5-s Drop Facility)",
+    "platform": "Drop Tower / Ground Analog",
+    "facility": "NASA Glenn Zero Gravity Facility",
+    "summary": "The cited BRE studies used gas-fueled burners to emulate condensed-fuel burning during short-duration microgravity at the NASA Glenn Zero Gravity Facility. These ground-facility results are not an ISS flight test. Consult the linked reports for burner configurations and study ranges.",
+    "status": "Completed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20170009141",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SOFIE-MIST",
+    "code": "SoFIE-MIST",
+    "title": "Solid Fuel Ignition and Extinction — Material Ignition and Suppression Test (SoFIE-MIST)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — SoFIE Insert & MIST Apparatus",
+    "summary": "Investigates externally irradiated piloted ignition, flame spread, and extinction of cylindrical cast PMMA rods (12.7 mm diameter × 150–154 mm length) across variable oxygen (14–30% O₂), pressure, and forced flow (10–100 cm/s) for the ISS Combustion Integrated Rack SoFIE insert and MIST experimental apparatus (NTRS 20200000361; NTRS 20150023467).",
+    "status": "Active Analysis",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20200000361",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SAFFIRE-IV",
+    "code": "SAFFIRE-IV",
+    "title": "Spacecraft Fire Experiment IV (SAFFIRE-IV)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit & Far-Field Diagnostics (Cygnus NG-13)",
+    "summary": "A Cygnus model for SAFFIRE-IV used temperatures near the payload outlet to estimate heat release and compared predicted downstream gas transport with experiment measurements. This record summarizes model development, not a numerical validation dataset.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220002714",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SAFFIRE-VI",
+    "code": "SAFFIRE-VI",
+    "title": "Spacecraft Fire Experiment VI (SAFFIRE-VI)",
+    "platform": "Cygnus",
+    "facility": "Saffire Flow Unit (Cygnus)",
+    "summary": "The preliminary SAFFIRE-VI report describes spacecraft-scale fire tests. The reported cabin temperature and pressure changes were less significant than the increases in carbon dioxide and carbon monoxide. Individual gas concentration measurements are not extracted here.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20240002981",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-25-BASS1",
+    "code": "BASS-I",
+    "title": "Burning and Suppression of Solids I (BASS-I)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "summary": "The cited BASS-II report includes earlier BASS-I results. It describes flames sensitive to airflow from 0 to 5 cm/s, with dim blue flames sustained below 1 cm/s that can intensify when airflow increases. The abstract does not assign this behavior to a specific BASS-I test.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20160000593",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-FLEX2",
+    "code": "FLEX-2",
+    "title": "Flame Extinguishment Experiment 2 (FLEX-2)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — MDCA",
+    "summary": "FLEX-2 studies liquid droplets, including fuel mixtures, imposed flow, and interactions between droplets. The linked NASA overview describes research objectives; it does not provide an individual test measurement in this record.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://gipoc.grc.nasa.gov/wp/fcf-cir/flex-2/",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-ACME-EFIELD",
+    "code": "ACME-EFIELD",
+    "title": "ACME Electric-Field Effects on Laminar Diffusion Flames (E-FIELD Flames)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "summary": "The ACME overview reports electric-field experiments using coflow and gas-jet burners with a downstream electrode at either polarity up to 10 kV. The overview does not quantify a resulting change in flame stability or suppression.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-ACME-FLAME-DESIGN",
+    "code": "ACME-FLAME-DESIGN",
+    "title": "ACME Flame Design",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "summary": "The ACME overview describes experiments on highly sooting and highly diluted gaseous flames using a coaxial coflow burner. It does not supply an individual extinction threshold in this record.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-ACME-SFLAMES",
+    "code": "ACME-S-FLAMES",
+    "title": "ACME Structure and Response of Spherical Diffusion Flames (S-Flames)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "summary": "The ACME overview describes porous spherical burners used to study soot processes and flame dynamics with approximately one-dimensional flame structure. No individual test conditions are extracted here.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-159",
+    "code": "ACME-CFI-G",
+    "title": "Cool Flames Investigation with Gases (ACME CFI-G / PSI-159)",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "summary": "The ACME overview describes low-temperature combustion studies using porous spherical burners. This record does not establish a numerical extinction limit or a specific hot-to-cool transition measurement.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20220015583",
+    "recordCount": 1
+  },
+  {
+    "id": "PSI-60",
+    "code": "SPICE",
+    "title": "Smoke Point in Co-flow Experiment (SPICE / PSI-60)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "summary": "The SPICE source describes planned measurements of soot-emission onset, flame shapes, stabilization heights, and temperature fields in coflowing gas-jet flames. Research objectives are not completed experimental results.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20090014827",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SAME",
+    "code": "SAME",
+    "title": "Smoke Aerosol Measurement Experiment (SAME / SAME-2)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "summary": "SAME-2 heated Teflon, Kapton, cotton, silicone rubber, and Pyrell below ignition. Reported study ranges were 0–8 cm/s airflow and 11–1800 s smoke aging. Most average particle sizes were 200–400 nm; some quiescent cases produced larger particles. These are aggregate ranges, not a single test.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20130000422",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-SLICE",
+    "code": "SLICE",
+    "title": "Structure and Liftoff in Combustion Experiment (SLICE)",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "summary": "The SLICE study compared methane coflow flames in microgravity and normal gravity. Microgravity cases had lower soot temperatures, higher soot volume fractions, and soot distributed more toward the flame wings. No numerical soot value is extracted here.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20140017780",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-LSP",
+    "code": "LSP",
+    "title": "Laminar Soot Processes (LSP)",
+    "platform": "Space Shuttle",
+    "facility": "Space Shuttle Columbia",
+    "summary": "The LSP report describes measurements of soot concentrations, flame shapes, smoke points, and flame structure from laminar diffusion flames on two Space Shuttle Columbia flights. Only the public abstract was reviewed; no full text is available at the linked NTRS record.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/19990053996",
+    "recordCount": 1
+  },
+  {
+    "id": "NTRS-DAFT",
+    "code": "DAFT",
+    "title": "Dust and Aerosol Measurement Feasibility Test (DAFT)",
+    "platform": "ISS",
+    "facility": "International Space Station (ISS)",
+    "summary": "DAFT was designed to assess whether the P-Trak particle counter could operate in long-duration microgravity for SAME. The source describes a 20 nm particle-counting capability and alcohol recycling inside the instrument; it does not report a combustion test or establish successful flight qualification.",
+    "status": "Historical source; current status not reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20050215648",
+    "recordCount": 1
+  }
+]

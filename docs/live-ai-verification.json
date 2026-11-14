@@ -1,0 +1,110 @@
+{
+  "kind": "evidence",
+  "analysis": {
+    "question": "Compare BASS-II and FLEX",
+    "plainLanguageExplanation": "Here is the source-linked evidence for BASS-II and FLEX. Each finding and quantity stays attached to its own record.",
+    "evidenceSummary": "[EV-PSI25-01 · BASS-II] BASS-II SIBAL tests showed limiting flame lengths and low-speed quenching in a small ISS duct. This record uses the documented GMT96-T7 baseline conditions (21% oxygen, 101.3 kPa, 10 cm/s). No numerical spread-rate value is extracted from the plotted curve.\n\n[EV-PSI69-01 · FLEX] In FLEX test FLEX-008 (30CAL06), a free-floating n-heptane droplet in cabin air burned for 14.8 s. The report lists 21% oxygen, 762.4 mmHg (approximately 101.6 kPa), initial diameter 2.95 mm, and a mean squared-diameter burning constant of 0.79 mm²/s. Droplet regression is not solid flame spread.",
+    "engineeringImplications": [
+      "[EV-PSI25-01] Research interpretation (not a measured result): Microgravity eliminates buoyant natural convection (which is ~20–30 cm/s in 1g), exposing a low-velocity regime (5–15 cm/s) where thin fabrics sustain steady concurrent spread, bounded below by radiative/conductive quenching at 1–5 cm/s (with higher quenching speeds required at lower O₂ concentrations).",
+      "[EV-PSI69-01] Research interpretation (not a measured result): Spherical droplet combustion in quiescent microgravity is governed by diffusive and radiative heat/mass transfer rather than buoyant convection, with large droplets susceptible to radiative extinction and visible soot shells (in n-heptane) residing inside the outer OH* chemiluminescence flame zone (where visible flame diameters are ~3/4 of LLUV OH* diameters, Section 4.2 p. 15)."
+    ],
+    "limitations": [
+      "[EV-PSI25-01] Short 10 cm sample length limited the duration of steady spread at higher velocities, and the velocity-stepping procedure could not resolve the flat bottom minimum-oxygen boundary below 16.4% O₂ (NTRS 20150008962 Section 3, p. 7). Exact numeric spread-rate values from Figure 4 are not tabulated as text in the report.",
+      "[EV-PSI69-01] Early FLEX tests (including FLEX-001 through FLEX-009) experienced trace fuel-needle conformal coating (Dow Corning 3140 RTV) contamination that minimally affected average burning-rate constants (K) and flame sizes but may have contributed to late-burn droplet disruption (Section 5.2, p. 16). Droplet burning-rate constants (mm²/s) cannot be directly compared to solid linear flame spread rates (mm/s).",
+      "Research use only. Experimental atmospheres and flammability boundaries are not recommended cabin settings or operating procedures."
+    ],
+    "citedEvidenceIds": [
+      "EV-PSI25-01",
+      "EV-PSI69-01"
+    ],
+    "responseMode": "nvidia",
+    "providerNote": "AI-assisted evidence selection via NVIDIA NIM (nvidia/nemotron-3.5-lightning-30b-a3b; record IDs and measurement keys validated against retrieved records; scientific text rendered from stored source fields).",
+    "claims": [
+      {
+        "recordId": "EV-PSI25-01",
+        "field": "findings",
+        "label": "BASS-II · Observation",
+        "text": "BASS-II SIBAL tests showed limiting flame lengths and low-speed quenching in a small ISS duct. This record uses the documented GMT96-T7 baseline conditions (21% oxygen, 101.3 kPa, 10 cm/s). No numerical spread-rate value is extracted from the plotted curve.",
+        "sourceUrl": "https://ntrs.nasa.gov/citations/20150008962"
+      },
+      {
+        "recordId": "EV-PSI69-01",
+        "field": "findings",
+        "label": "FLEX · Observation",
+        "text": "In FLEX test FLEX-008 (30CAL06), a free-floating n-heptane droplet in cabin air burned for 14.8 s. The report lists 21% oxygen, 762.4 mmHg (approximately 101.6 kPa), initial diameter 2.95 mm, and a mean squared-diameter burning constant of 0.79 mm²/s. Droplet regression is not solid flame spread.",
+        "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456"
+      },
+      {
+        "recordId": "EV-PSI69-01",
+        "field": "measurements.dropletBurnDuration",
+        "label": "Droplet burn duration",
+        "text": "14.8 s (uncertainty not reported). Read the sample-specific conditions in the record.",
+        "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456"
+      }
+    ],
+    "recordConditions": [
+      {
+        "recordId": "EV-PSI25-01",
+        "text": "O₂: 21 %; study range: 16.4–21 % (not a single test) · pressure: 101.3 kPa; study range: 101.3–101.3 kPa (not a single test) · airflow: 10 cm/s; study range: 1–53 cm/s (not a single test) · Microgravity"
+      },
+      {
+        "recordId": "EV-PSI69-01",
+        "text": "O₂: 21 % · pressure: 101.6 kPa; study range: 70.9–309 kPa (not a single test) · airflow: 0 cm/s · Microgravity"
+      }
+    ]
+  },
+  "actions": [
+    {
+      "label": "Compare BASS-II and FLEX",
+      "href": "/compare?ids=EV-PSI25-01%2CEV-PSI69-01",
+      "description": "Low-Velocity Concurrent Flame Growth, Spread, and Quenching over SIBAL Fabric (GMT96-T7 & Matrix) ↔ Spherically Symmetric n-Heptane Droplet Combustion in Cabin Air (Test FLEX-008 & Campaign). Different metrics stay separate."
+    }
+  ],
+  "brief": "# FLARE Evidence Brief\n\nResearch question: Compare BASS-II and FLEX\n\n## Evidence\n[EV-PSI25-01 · BASS-II] BASS-II SIBAL tests showed limiting flame lengths and low-speed quenching in a small ISS duct. This record uses the documented GMT96-T7 baseline conditions (21% oxygen, 101.3 kPa, 10 cm/s). No numerical spread-rate value is extracted from the plotted curve.\n\n[EV-PSI69-01 · FLEX] In FLEX test FLEX-008 (30CAL06), a free-floating n-heptane droplet in cabin air burned for 14.8 s. The report lists 21% oxygen, 762.4 mmHg (approximately 101.6 kPa), initial diameter 2.95 mm, and a mean squared-diameter burning constant of 0.79 mm²/s. Droplet regression is not solid flame spread.\n\n## Reported quantities\n- [EV-PSI69-01] Droplet burn duration: 14.8 s (uncertainty not reported). Read the sample-specific conditions in the record.\n\n## Research interpretations\n- [EV-PSI25-01] Research interpretation (not a measured result): Microgravity eliminates buoyant natural convection (which is ~20–30 cm/s in 1g), exposing a low-velocity regime (5–15 cm/s) where thin fabrics sustain steady concurrent spread, bounded below by radiative/conductive quenching at 1–5 cm/s (with higher quenching speeds required at lower O₂ concentrations).\n- [EV-PSI69-01] Research interpretation (not a measured result): Spherical droplet combustion in quiescent microgravity is governed by diffusive and radiative heat/mass transfer rather than buoyant convection, with large droplets susceptible to radiative extinction and visible soot shells (in n-heptane) residing inside the outer OH* chemiluminescence flame zone (where visible flame diameters are ~3/4 of LLUV OH* diameters, Section 4.2 p. 15).\n\n## Conditions\n- [EV-PSI25-01] O₂: 21 %; study range: 16.4–21 % (not a single test) · pressure: 101.3 kPa; study range: 101.3–101.3 kPa (not a single test) · airflow: 10 cm/s; study range: 1–53 cm/s (not a single test) · Microgravity\n- [EV-PSI69-01] O₂: 21 % · pressure: 101.6 kPa; study range: 70.9–309 kPa (not a single test) · airflow: 0 cm/s · Microgravity\n\n## Limitations\n- [EV-PSI25-01] Short 10 cm sample length limited the duration of steady spread at higher velocities, and the velocity-stepping procedure could not resolve the flat bottom minimum-oxygen boundary below 16.4% O₂ (NTRS 20150008962 Section 3, p. 7). Exact numeric spread-rate values from Figure 4 are not tabulated as text in the report.\n- [EV-PSI69-01] Early FLEX tests (including FLEX-001 through FLEX-009) experienced trace fuel-needle conformal coating (Dow Corning 3140 RTV) contamination that minimally affected average burning-rate constants (K) and flame sizes but may have contributed to late-burn droplet disruption (Section 5.2, p. 16). Droplet burning-rate constants (mm²/s) cannot be directly compared to solid linear flame spread rates (mm/s).\n- Research use only. Experimental atmospheres and flammability boundaries are not recommended cabin settings or operating procedures.\n\n## Sources\n- BASS-II [EV-PSI25-01]: https://ntrs.nasa.gov/citations/20150008962 — Report review on file\n- FLEX [EV-PSI69-01]: https://ntrs.nasa.gov/citations/20150023456 — Report review on file\n\n## Method\nAI-assisted evidence selection via NVIDIA NIM (nvidia/nemotron-3.5-lightning-30b-a3b; record IDs and measurement keys validated against retrieved records; scientific text rendered from stored source fields).\nResearch use only; not NASA-certified.\n",
+  "citations": [
+    {
+      "id": "EV-PSI25-01",
+      "title": "Low-Velocity Concurrent Flame Growth, Spread, and Quenching over SIBAL Fabric (GMT96-T7 & Matrix)",
+      "investigation": "BASS-II",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20150008962",
+      "sourceDocument": "Zhao, T'ien, Ferkul, and Olson, NTRS 20150008962 (9th U.S. National Combustion Meeting, 2015, pp. 1–9); Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 7.0, pp. 93–101 & Appendix A.6, pp. 112–114)",
+      "limitations": [
+        "Short 10 cm sample length limited the duration of steady spread at higher velocities, and the velocity-stepping procedure could not resolve the flat bottom minimum-oxygen boundary below 16.4% O₂ (NTRS 20150008962 Section 3, p. 7). Exact numeric spread-rate values from Figure 4 are not tabulated as text in the report."
+      ],
+      "recordType": "experimental_observation",
+      "provenance": {
+        "level": "prior_report_audit",
+        "label": "Report review on file",
+        "sourceUrl": "https://ntrs.nasa.gov/citations/20150008962",
+        "locator": "Zhao, T'ien, Ferkul, and Olson, NTRS 20150008962 (9th U.S. National Combustion Meeting, 2015, pp. 1–9); Olson et al., NASA/TM-20210011385 (NTRS 20210011385, Section 7.0, pp. 93–101 & Appendix A.6, pp. 112–114)",
+        "reviewedAt": "2026-11-14",
+        "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+      }
+    },
+    {
+      "id": "EV-PSI69-01",
+      "title": "Spherically Symmetric n-Heptane Droplet Combustion in Cabin Air (Test FLEX-008 & Campaign)",
+      "investigation": "FLEX",
+      "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456",
+      "sourceDocument": "Dietrich et al., NASA/TP-2015-216046 (NTRS 20150023456, Executive Summary p. 1, Section 3.1.2 p. 8, Table I p. 9, Table V p. 12, Section 5.2 p. 16, Table IX p. 20)",
+      "limitations": [
+        "Early FLEX tests (including FLEX-001 through FLEX-009) experienced trace fuel-needle conformal coating (Dow Corning 3140 RTV) contamination that minimally affected average burning-rate constants (K) and flame sizes but may have contributed to late-burn droplet disruption (Section 5.2, p. 16). Droplet burning-rate constants (mm²/s) cannot be directly compared to solid linear flame spread rates (mm/s)."
+      ],
+      "recordType": "experimental_observation",
+      "provenance": {
+        "level": "prior_report_audit",
+        "label": "Report review on file",
+        "sourceUrl": "https://ntrs.nasa.gov/citations/20150023456",
+        "locator": "Dietrich et al., NASA/TP-2015-216046 (NTRS 20150023456, Executive Summary p. 1, Section 3.1.2 p. 8, Table I p. 9, Table V p. 12, Section 5.2 p. 16, Table IX p. 20)",
+        "reviewedAt": "2026-11-14",
+        "scope": "Prior field audit retained. Metric corrections rechecked where documented in the remediation log; this is not independent scientific certification."
+      }
+    }
+  ],
+  "contextIds": [
+    "EV-PSI25-01",
+    "EV-PSI25-02",
+    "EV-PSI69-01"
+  ],
+  "scenarioNote": "Retrieval uses an illustrative microgravity reference. The conditions below belong to each cited record, not a shared experimental setup."
+}

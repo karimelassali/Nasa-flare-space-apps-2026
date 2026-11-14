@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CH3 PyroShield Zero-G | NASA Fire Safety Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { background-color: #0b0f19; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .emergency-active { background-color: #1f090d !important; border-color: #ef4444 !important; }
+    .emergency-banner { animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    .markdown-body h1, .markdown-body h2, .markdown-body h3 { color: #38bdf8; font-weight: 700; margin-top: 1.25rem; margin-bottom: 0.5rem; border-bottom: 1px solid #1e293b; padding-bottom: 0.25rem; }
+    .emergency-active .markdown-body h1, .emergency-active .markdown-body h2, .emergency-active .markdown-body h3 { color: #f87171; border-color: #7f1d1d; }
+    .markdown-body ul, .markdown-body ol { margin-left: 1.25rem; margin-bottom: 0.75rem; }
+    .markdown-body ul { list-style-type: disc; }
+    .markdown-body ol { list-style-type: decimal; }
+    .markdown-body li { margin-bottom: 0.35rem; line-height: 1.6; }
+    .markdown-body strong { color: #f8fafc; }
+  </style>
+</head>
+<body id="appBody" class="min-h-screen transition-colors duration-300">
+
+  <!-- Top Navigation Bar -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-blue-500/30">CH3</div>
+      <div>
+        <h1 class="text-xl font-bold tracking-wide text-white">PyroShield Zero-G</h1>
+        <p class="text-xs text-slate-400">Spacecraft Fire Risk & Suppression Intelligence • NASA Space Apps</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <input type="password" id="apiKeyInput" placeholder="Paste Gemini API Key here..." 
+        class="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white w-64 focus:outline-none focus:border-blue-500" />
+      <button onclick="saveApiKey()" class="bg-slate-700 hover:bg-slate-600 text-white text-sm px-3 py-2 rounded-lg font-medium">Save Key</button>
+      <button id="emergencyBtn" onclick="toggleEmergency()" class="bg-red-600/20 border border-red-500 text-red-400 hover:bg-red-600 hover:text-white text-sm px-4 py-2 rounded-lg font-bold transition">
+        🚨 EMERGENCY MODE
+      </button>
+    </div>
+  </header>
+
+  <!-- Emergency Alert Strip -->
+  <div id="emergencyBanner" class="hidden emergency-banner bg-red-600 text-white text-center py-2 font-bold text-sm tracking-wider">
+    ⚠️ ACTIVE CABIN FIRE ALERT — IMMEDIATE DEPOWER & VENTILATION ISOLATION PROTOCOL ENGAGED ⚠️
+  </div>
+
+  <!-- Main Dashboard Grid -->
+  <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+    
+    <!-- Left Control Panel -->
+    <section class="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-5 h-fit shadow-xl">
+      <h2 class="text-lg font-semibold text-white border-b border-slate-800 pb-2">Mission Telemetry Inputs</h2>
+
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1.5">Gravity Environment</label>
+        <select id="envSelect" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-sm text-white">
+          <option value="ISS Microgravity (0g)">ISS Microgravity (0g)</option>
+          <option value="Lunar Surface Partial Gravity (Moon - 1/6g)">Lunar Habitat (Moon - 1/6g)</option>
+          <option value="Martian Surface Partial Gravity (Mars - 3/8g)">Mars Habitat (Mars - 3/8g)</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1.5">Spacecraft Module</label>
+        <select id="moduleSelect" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-sm text-white">
+          <option value="Avionics Bay / Electronics Rack">Avionics Bay / Electronics Rack</option>
+          <option value="Crew Habitation & Sleeping Quarters">Crew Habitation Quarters</option>
+          <option value="ECLSS Oxygen Generation / Life Support">ECLSS Oxygen Generation System</option>
+          <option value="Propulsion / Liquid Fuel Storage">Propulsion / Liquid Fuel Storage</option>
+          <option value="Logistics & Cargo Transfer Module">Logistics & Cargo Module</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-xs uppercase tracking-wider text-slate-400 mb-1.5">
+          <span>Cabin Oxygen Concentration (O₂)</span>
+          <span id="o2Value" class="text-blue-400 font-bold text-sm">24%</span>
+        </div>
+        <input type="range" id="o2Slider" min="21" max="36" value="24" 
+          oninput="document.getElementById('o2Value').innerText = this.value + '%'"
+          class="w-full accent-blue-500 cursor-pointer" />
+        <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+          <span>21% (ISS Nominal)</span>
+          <span>30-34% (Exploration)</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 mb-1.5">Fuel Source / Hazard Scenario</label>
+        <select id="presetFuel" onchange="document.getElementById('fuelInput').value = this.value" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-sm text-white mb-2">
+          <option value="Overheated electronic wires and polymer insulation (Kapton/ETFE)">Overheated Wires & Polymer Insulation</option>
+          <option value="Liquid hydrocarbon fuel droplet leak near high-voltage electronics (Cool Flame risk)">Liquid Hydrocarbon Droplets (Cool Flame)</option>
+          <option value="Solid polymer fabrics, trash bags, and foam packaging">Solid Polymers & Cabin Fabrics</option>
+          <option value="Solid-fuel oxygen generator (SFOG) canister runaway (Mir 1997 scenario)">Oxygen Generator Canister (Mir 1997 Type)</option>
+          <option value="Lithium-ion camera/laptop battery thermal runaway">Lithium-Ion Battery Thermal Runaway</option>
+        </select>
+        <textarea id="fuelInput" rows="2" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-sm text-white"
+          placeholder="Or type custom material/scenario...">Overheated electronic wires and polymer insulation (Kapton/ETFE)</textarea>
+      </div>
+
+      <button onclick="analyzeFireRisk()" id="analyzeBtn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg shadow-blue-600/30 transition flex items-center justify-center gap-2">
+        <span>⚡ Evaluate Fire Risk & Protocol</span>
+      </button>
+    </section>
+
+    <!-- Right Output Panel -->
+    <section class="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl min-h-[520px] flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+        <h2 class="text-lg font-semibold text-white">NASA Grounded Safety Analysis</h2>
+        <span id="activeModelBadge" class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full border border-slate-700">Auto-Discovery • NASA-STD-6001B</span>
+      </div>
+
+      <div id="loadingState" class="hidden flex-1 flex flex-col items-center justify-center text-center py-12">
+        <div class="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-3"></div>
+        <p id="loadingText" class="text-slate-300 font-medium">Detecting available Gemini models for your API key...</p>
+        <p id="subLoadingText" class="text-xs text-slate-500 mt-1">Please wait a few seconds</p>
+      </div>
+
+      <div id="emptyState" class="flex-1 flex flex-col items-center justify-center text-center text-slate-500 py-12">
+        <p class="text-base mb-1">Configure mission parameters on the left and click <strong class="text-slate-300">Evaluate Fire Risk</strong>.</p>
+        <p class="text-xs">Grounded in NASA Task Book (FLEX, SAME, Saffire, SoFIE, BRE) & NTRS Fire Safety Standards.</p>
+      </div>
+
+      <div id="resultOutput" class="hidden markdown-body text-sm text-slate-200 overflow-y-auto"></div>
+    </section>
+  </main>
+
+  <script>
+    let isEmergency = false;
+    window.onload = () => {
+      const saved = localStorage.getItem('pyroshield_api_key');
+      if (saved) document.getElementById('apiKeyInput').value = saved;
+    };
+
+    function saveApiKey() {
+      const key = document.getElementById('apiKeyInput').value.trim();
+      if (!key) return alert('Please paste your Gemini API Key first.');
+      localStorage.setItem('pyroshield_api_key', key);
+      alert('API Key saved locally in your browser!');
+    }
+
+    function toggleEmergency() {
+      isEmergency = !isEmergency;
+      const body = document.getElementById('appBody');
+      const banner = document.getElementById('emergencyBanner');
+      const btn = document.getElementById('emergencyBtn');
+      if (isEmergency) {
+        body.classList.add('emergency-active');
+        banner.classList.remove('hidden');
+        btn.classList.replace('bg-red-600/20', 'bg-red-600');
+        btn.classList.replace('text-red-400', 'text-white');
+      } else {
+        body.classList.remove('emergency-active');
+        banner.classList.add('hidden');
+        btn.classList.replace('bg-red-600', 'bg-red-600/20');
+        btn.classList.replace('text-white', 'text-red-400');
+      }
+    }
+
+    async function fetchWithTimeout(url, options = {}, timeoutMs = 30000) {
+      const controller = new AbortController();
+      const id = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const response = await fetch(url, { ...options, signal: controller.signal });
+        clearTimeout(id);
+        return response;
+      } catch (err) {
+        clearTimeout(id);
+        throw err;
+      }
+    }
+
+    async function getAvailableModels(apiKey) {
+      try {
+        const res = await fetchWithTimeout(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(apiKey)}`, {}, 10000);
+        const data = await res.json();
+        if (data.models && Array.isArray(data.models)) {
+          const valid = data.models
+            .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
+            .map(m => m.name.replace('models/', ''))
+            .filter(name => name.includes('gemini') && !name.includes('embedding') && !name.includes('vision') && !name.includes('tts') && !name.includes('image') && !name.includes('robotics'));
+          
+          // Prioritize fast/flash/hydrogen models first
+          valid.sort((a, b) => {
+            const score = (n) => (n.includes('flash') ? 3 : 0) + (n.includes('hydrogen') ? 2 : 0) + (n.includes('latest') ? 1 : 0);
+            return score(b) - score(a);
+          });
+          if (valid.length > 0) return valid.slice(0, 5);
+        }
+      } catch (e) {
+        console.warn('Model discovery fallback:', e);
+      }
+      return ['gemini-3.8-flash', 'gemini-flash-latest', 'gemini-pro-latest'];
+    }
+
+    async function analyzeFireRisk() {
+      const apiKey = document.getElementById('apiKeyInput').value.trim();
+      if (!apiKey) return alert('Please paste and save your Gemini API Key at the top right first!');
+
+      const env = document.getElementById('envSelect').value;
+      const mod = document.getElementById('moduleSelect').value;
+      const o2 = document.getElementById('o2Slider').value;
+      const fuel = document.getElementById('fuelInput').value;
+
+      const loadingText = document.getElementById('loadingText');
+      const subLoadingText = document.getElementById('subLoadingText');
+      const badge = document.getElementById('activeModelBadge');
+      const btn = document.getElementById('analyzeBtn');
+
+      btn.disabled = true;
+      btn.classList.add('opacity-60', 'cursor-not-allowed');
+      document.getElementById('emptyState').classList.add('hidden');
+      document.getElementById('resultOutput').classList.add('hidden');
+      document.getElementById('loadingState').classList.remove('hidden');
+
+      loadingText.innerText = 'Checking active models on your API key...';
+      subLoadingText.innerText = 'Auto-selecting fastest available Gemini model';
+
+      const models = await getAvailableModels(apiKey);
+      let lastError = '';
+
+      const systemPrompt = `You are PyroShield AI, an operational NASA Spacecraft Fire Safety Assistant for the "CH3 PyroShield Zero-G" dashboard. Ground your answers strictly in NASA microgravity combustion research (ISS FLEX, SAME, Saffire, SoFIE, BRE), ISS Portable Fire Extinguisher protocols (Fine Water Mist PFE and CO2 PFE), Mir 1997 incident lessons, and NASA-STD-6001B standards, citing exact NASA Grant or NTRS Report numbers.
+Always structure your response cleanly into these 4 Markdown sections:
+### 1. Ignition Cause & Flame Behavior
+### 2. Risk Score (0-100) & Spread Forecast
+### 3. Immediate Suppression Protocol
+### 4. Prevention & Material Safeguards`;
+
+      const userQuery = `${isEmergency ? '[URGENT EMERGENCY MODE ACTIVE - PRIORITIZE IMMEDIATE CREW SURVIVAL STEPS FIRST]\n' : ''}Environment: ${env} | Spacecraft Module: ${mod} | Oxygen: ${o2}% | Fuel/Hazard: ${fuel}`;
+
+      for (let i = 0; i < models.length; i++) {
+        const currentModel = models[i];
+        try {
+          loadingText.innerText = `Generating NASA Safety Analysis via ${currentModel}...`;
+          subLoadingText.innerText = `Model ${i + 1} of ${models.length} • Grounded in NASA-STD-6001B`;
+
+          const res = await fetchWithTimeout(
+            `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${encodeURIComponent(apiKey)}`,
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                system_instruction: { parts: [{ text: systemPrompt }] },
+                contents: [{ parts: [{ text: userQuery }] }]
+              })
+            },
+            30000
+          );
+
+          const data = await res.json();
+          if (data.error) throw new Error(data.error.message);
+
+          const markdownText = data.candidates[0].content.parts[0].text;
+          badge.innerText = `Active: ${currentModel} • NASA-STD-6001B`;
+          document.getElementById('resultOutput').innerHTML = marked.parse(markdownText);
+          document.getElementById('resultOutput').classList.remove('hidden');
+          document.getElementById('loadingState').classList.add('hidden');
+          btn.disabled = false;
+          btn.classList.remove('opacity-60', 'cursor-not-allowed');
+          return;
+        } catch (err) {
+          lastError = err.name === 'AbortError' ? 'Timed out (30s)' : err.message;
+          subLoadingText.innerText = `${currentModel} unavailable (${lastError}), switching...`;
+        }
+      }
+
+      alert('All models returned an error:\n' + lastError);
+      document.getElementById('loadingState').classList.add('hidden');
+      document.getElementById('emptyState').classList.remove('hidden');
+      btn.disabled = false;
+      btn.classList.remove('opacity-60', 'cursor-not-allowed');
+    }
+  </script>
+</body>
+</html>

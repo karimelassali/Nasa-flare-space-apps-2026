@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-14T20:24:32.085Z",
+  "question": "Compare BASS-II and FLEX",
+  "validationScope": "Actual provider request; citation IDs, selected fields and rendered claims checked against current local corpus. This is not an independent scientific review.",
+  "results": [
+    {
+      "provider": "nvidia",
+      "responseMode": "nvidia",
+      "realResponseVerified": true,
+      "milliseconds": 1056,
+      "categories": [],
+      "citedEvidenceIds": [
+        "EV-PSI25-01",
+        "EV-PSI69-01"
+      ],
+      "claimsMatchStoredSourceFields": true,
+      "providerNote": "AI-assisted evidence selection via NVIDIA NIM (nvidia/nemotron-3.5-lightning-30b-a3b; record IDs and measurement keys validated against retrieved records; scientific text rendered from stored source fields)."
+    },
+    {
+      "provider": "gemini",
+      "responseMode": "gemini",
+      "realResponseVerified": true,
+      "milliseconds": 3080,
+      "categories": [],
+      "citedEvidenceIds": [
+        "EV-PSI25-01",
+        "EV-PSI69-01"
+      ],
+      "claimsMatchStoredSourceFields": true,
+      "providerNote": "AI-assisted evidence selection via Google Gemini (gemini-2.5-flash; record IDs and measurement keys validated against retrieved records; scientific text rendered from stored source fields)."
+    },
+    {
+      "provider": "openai",
+      "responseMode": "deterministic_fallback",
+      "realResponseVerified": false,
+      "milliseconds": 543,
+      "categories": [
+        "authentication_or_permission"
+      ],
+      "citedEvidenceIds": [
+        "EV-PSI25-01",
+        "EV-PSI69-01"
+      ],
+      "claimsMatchStoredSourceFields": true,
+      "providerNote": "OpenAI API unavailable or timed out; reverted to non-AI deterministic evidence summary."
+    }
+  ]
+}
