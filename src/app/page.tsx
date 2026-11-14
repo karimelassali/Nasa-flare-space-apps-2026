@@ -228,17 +228,17 @@ export default function LandingPage() {
 
               <dl className="landing-enter landing-enter-delay-3 mt-10 grid max-w-[480px] grid-cols-3 gap-4 border-t border-white/10 pt-5">
                 <div>
-                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-500">Records</dt>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-400">Records</dt>
                   <dd className="landing-stat mt-1 text-xl font-semibold text-white">{corpus.totalRecords}</dd>
                 </div>
                 <div>
-                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-500">Investigations</dt>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-400">Investigations</dt>
                   <dd className="landing-stat mt-1 text-xl font-semibold text-white">
                     {corpus.uniqueInvestigationCount}
                   </dd>
                 </div>
                 <div>
-                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-500">Workspaces</dt>
+                  <dt className="font-mono text-[9px] uppercase tracking-[0.14em] text-slate-400">Workspaces</dt>
                   <dd className="landing-stat mt-1 text-xl font-semibold text-white">7</dd>
                 </div>
               </dl>
@@ -264,7 +264,6 @@ export default function LandingPage() {
                     alt="The FLARE app comparing two SAFFIRE experiment records, with source notes and unreported uncertainties visible."
                     width={1440}
                     height={1100}
-                    preload
                     sizes="(max-width: 1024px) 92vw, 54vw"
                     className="h-auto w-full object-cover object-top"
                   />
@@ -297,7 +296,7 @@ export default function LandingPage() {
 
           <a
             href="#approach"
-            className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-500 transition hover:text-slate-300 sm:flex"
+            className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-400 transition hover:text-slate-300 sm:flex"
           >
             Scroll to explore
             <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
@@ -793,7 +792,7 @@ export default function LandingPage() {
                   className="h-auto w-full rounded-[16px] sm:rounded-[22px]"
                 />
               </figure>
-              <figcaption className="mt-4 flex flex-col justify-between gap-1 px-1 font-mono text-[9px] uppercase tracking-[0.1em] text-slate-500 sm:flex-row sm:items-center">
+              <figcaption className="mt-4 flex flex-col justify-between gap-1 px-1 font-mono text-[9px] uppercase tracking-[0.1em] text-slate-400 sm:flex-row sm:items-center">
                 <span>FLARE · Microgravity Fire Safety Intelligence</span>
                 <span>PyroShield Zero-G · NASA Space Apps 2026</span>
               </figcaption>

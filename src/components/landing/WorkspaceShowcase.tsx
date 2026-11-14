@@ -82,7 +82,7 @@ export function WorkspaceShowcase() {
       <div
         role="tablist"
         aria-label="Product previews"
-        className="flex gap-1 overflow-x-auto border-b border-slate-200/80 bg-[#FAFBFD] px-3 py-3 sm:px-4"
+        className="flex flex-wrap gap-1 border-b border-slate-200/80 bg-[#FAFBFD] px-3 py-3 sm:px-4"
       >
         {TABS.map((item, index) => {
           const TabIcon = item.icon;

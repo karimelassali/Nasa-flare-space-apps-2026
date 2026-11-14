@@ -126,4 +126,4 @@ NASA publication data is linked to its source at the record level. Review the li
 
 - **Karim El Assali** Application development and engineering
 - **Hamza Sailah**     NASA experiment research and data curation.
-- **Mohammed Zarwal** — Software testing and product improvement suggestions.
+- **Mohamed Zaroual** — Software testing and product improvement suggestions.
