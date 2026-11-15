@@ -1342,5 +1342,181 @@
     ],
     "verifiedAt": "2026-11-14",
     "fuelType": "Not applicable"
+  },
+  {
+    "id": "EV-SAME-02",
+    "investigationId": "NTRS-SAME",
+    "experimentCode": "SAME",
+    "title": "Silicone Rubber Smoke: Arithmetic Mean Particle Diameter 227 nm (SAME Baseline Runs)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Microgravity Science Glovebox (MSG)",
+    "material": "Silicone rubber (overheated, below ignition)",
+    "materialCategory": "Solid Polymers & Spacecraft Fabrics",
+    "sampleGeometry": "Silicone rubber samples on a porous wick, heated below ignition in the MSG (six silicone rubber samples among 30 total across five materials)",
+    "flowConfiguration": "Moment-method aerosol diagnostics downstream of the heated sample; smoke aged in an aging chamber (study airflow range 0–8 cm/s)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": null,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {
+      "airflowRangeCms": [
+        0,
+        8
+      ]
+    },
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "particleMeanDiameter": {
+        "value": 227,
+        "unit": "nm",
+        "uncertainty": null,
+        "conditionNote": "NASA SAME fact sheet: 'the AMD for silicone rubber is 227 nm, almost half the particle mass is larger than 1000 nm.' Arithmetic mean diameter across SAME silicone rubber baseline runs; not a single-test particle count."
+      },
+      "measurementNotes": "See NASA Smoke Aerosol Measurement Experiment (SAME) fact sheet (nasa.gov): SAME conducted in the MSG on the ISS during Expedition 15; 30 samples, six per material. AMD values are campaign statistics for the material's baseline runs, not a single test point. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "SAME heated silicone rubber below ignition in microgravity and measured the smoke particle size distribution by the moment method. The reported arithmetic mean diameter (AMD) for silicone rubber is 227 nm, while almost half of the particle mass is in particles larger than 1000 nm. The fact sheet reports arithmetic mean diameters generally in the 100–200 nm range across materials, and states the silicone rubber value specifically as 227 nm.",
+    "interpretation": "Research interpretation: A single mean diameter understates detection difficulty — for silicone rubber smoke, nearly half the particle mass sits above 1000 nm while the count-mean is 227 nm, so a detector tuned only to sub-micron particles can miss much of the mass. This is a smoke-detection insight, not a flammability limit.",
+    "evidenceLimitations": "AMD is a campaign statistic for silicone rubber baseline runs, not one test at one airflow, temperature, or aging time; the fact sheet does not tabulate per-test conditions for this value. Particle size alone does not establish detector alarm performance, which also depends on concentration, aging, and transport. Does not establish behavior for other materials (Teflon smoke was primarily below 1 µm).",
+    "source": "NASA",
+    "sourceDocument": "NASA Smoke Aerosol Measurement Experiment (SAME) fact sheet (nasa.gov, updated 2025); Urban et al. 2009 cited therein",
+    "links": [
+      {
+        "label": "NASA SAME fact sheet (Expedition 15 results, silicone rubber AMD 227 nm)",
+        "url": "https://www.nasa.gov/wp-content/uploads/2025/07/smoke-aerosol-measurement-experiment-same.pdf",
+        "type": "NASA"
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  {
+    "id": "EV-ACME-BRE-02",
+    "investigationId": "NTRS-ACME-BRE",
+    "experimentCode": "ACME-BRE",
+    "title": "Burning Rate Emulator: Self-Extinguishment Below ~25% Oxygen in Still Microgravity Air (BRE ISS Tests)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "Gaseous methane and ethylene (pure and N₂-diluted) emulating condensed-phase fuels",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "25 mm and 50 mm diameter circular porous gas-fueled burners (BRE)",
+    "flowConfiguration": "Quiescent still atmosphere; no forced airflow (0 cm/s)",
+    "conditions": {
+      "oxygenPercent": null,
+      "pressureKpa": null,
+      "airflowCms": 0.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": 25,
+        "unit": "% O₂",
+        "uncertainty": null,
+        "conditionNote": "Stocker, NTRS 20210022542 (JASMAC-33, 2021), BRE slide: flames 'were found to self-extinguish in concentrations below ~25% (by volume)'. This is a reported self-extinction threshold for BRE gas flames, not a standard LOI test and not a cabin safety limit."
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "measurementNotes": "See Stocker, NTRS 20210022542 (JASMAC-33, 13–15 October 2021), BRE slide. Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "BRE ISS tests burned methane and ethylene gas flames in still microgravity atmospheres to emulate condensed-fuel burning. The reported findings: low-momentum flames can burn for minutes with no airflow or flame spread; flames self-extinguished below ~25% oxygen by volume; larger flames generally self-extinguished within 1.5 minutes at elevated oxygen, while ethylene flames could burn for minutes and methane flames self-extinguished within a minute.",
+    "interpretation": "Research interpretation: A gas flame can persist for minutes in still air at elevated oxygen yet self-extinguish below ~25% oxygen — still-air persistence and the oxygen threshold are separate findings, and neither is a cabin oxygen safety limit for solid materials.",
+    "evidenceLimitations": "BRE emulates condensed fuels with gas burners; it omits char formation and melt behavior. The ~25% threshold is approximate ('below ~25%') and applies to BRE gas flames, not to SIBAL, PMMA, or other solids. No per-test oxygen/pressure table is extracted here.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20210022542 (JASMAC-33, 13–15 October 2021), BRE slide",
+    "links": [
+      {
+        "label": "NASA NTRS 20210022542 (ACME JASMAC-33, BRE findings)",
+        "url": "https://ntrs.nasa.gov/citations/20210022542",
+        "type": "NTRS"
+      }
+    ],
+    "verifiedAt": "2026-11-15"
+  },
+  {
+    "id": "EV-ACME-CFIG-02",
+    "investigationId": "PSI-159",
+    "experimentCode": "ACME-CFI-G",
+    "title": "First Steady Spherical Cool Diffusion Flames of Gaseous n-Butane (CFI-G, 23 June 2021)",
+    "recordType": "experiment_observation",
+    "platform": "ISS",
+    "facility": "Combustion Integrated Rack (CIR) — ACME Insert",
+    "material": "n-Butane diluted with nitrogen (gaseous fuel)",
+    "materialCategory": "Gaseous Surrogate",
+    "sampleGeometry": "6.35 mm porous spherical burner",
+    "flowConfiguration": "Quiescent microgravity chamber; fuel supplied through the porous sphere, no forced airflow",
+    "conditions": {
+      "oxygenPercent": 40.0,
+      "pressureKpa": 202.6,
+      "airflowCms": 0.0,
+      "gravityLevel": "Microgravity"
+    },
+    "conditionRange": {},
+    "measurements": {
+      "flameSpreadRate": {
+        "value": null,
+        "unit": "mm/s",
+        "uncertainty": null
+      },
+      "limitingOxygenIndex": {
+        "value": null,
+        "unit": "% O₂",
+        "uncertainty": null
+      },
+      "burnDurationSec": {
+        "value": null,
+        "unit": "s",
+        "uncertainty": null
+      },
+      "coolFlameDarkPeriod": {
+        "value": 1,
+        "unit": "s",
+        "uncertainty": null,
+        "conditionNote": "Stocker, NTRS 20210022542, CFI-G slide: composite sequence shows hot-flame quench, '~1-s dark period', then appearance of a cool flame much smaller than the hot flame. Approximate duration, not a timed single-test measurement."
+      },
+      "measurementNotes": "See Stocker, NTRS 20210022542 (JASMAC-33, 2021), CFI-G slide; University of Maryland FPE release, 7 July 2021, for the 23 June 2021 test conditions (n-butane diluted with nitrogen; oxidizer 40% oxygen in nitrogen; 2 atm, converted × 101.325 kPa and rounded to one decimal: 202.6 kPa). Individual metrics retain their own condition notes where the scope differs. Unknown uncertainties are not zero; campaign ranges are not a paired test matrix."
+    },
+    "finding": "On 23 June 2021, CFI-G produced the first observed steady spherical cool diffusion flames of a gaseous fuel aboard the ISS. After more than 150 hot diffusion flames burned between January and June 2021 without transitioning, three tests at n-butane diluted with nitrogen, 40% oxygen in nitrogen, and 2 atm showed hot flames extinguish by radiative heat loss, a ~1 s dark period, then residual burner heat re-igniting the fuel as a steady spherical cool flame much smaller than the hot flame. Cool flames burn at 600–1000 K, far cooler than the 1100–2200 K of typical hot flames.",
+    "interpretation": "Research interpretation: A hot flame going dark does not mean combustion has ended — residual burner heat can re-establish a dim cool flame that cameras barely see. That matters for fire detection: a cool flame is a real, persistent combustion mode, not an extinguished fire.",
+    "evidenceLimitations": "Three tests on one day produced the cool flames; more than 150 prior hot-flame tests did not transition. The 40% O₂ / 2 atm conditions are far from cabin atmospheres and do not establish cool-flame behavior at spacecraft conditions. Cool-flame temperatures (600–1000 K) are reported ranges from the project release, not per-test measurements extracted here.",
+    "source": "NASA NTRS",
+    "sourceDocument": "Stocker, NTRS 20210022542 (JASMAC-33, 2021), CFI-G slide; University of Maryland FPE, 'Unusual Flames Discovered Aboard the International Space Station' (7 July 2021)",
+    "links": [
+      {
+        "label": "NASA NTRS 20210022542 (ACME JASMAC-33, CFI-G slide)",
+        "url": "https://ntrs.nasa.gov/citations/20210022542",
+        "type": "NTRS"
+      },
+      {
+        "label": "University of Maryland FPE: cool flames discovered aboard the ISS (23 June 2021 conditions)",
+        "url": "https://fpe.umd.edu/news/story/unusual-flames-discovered-aboard-the-international-space-station",
+        "type": "University"
+      }
+    ],
+    "verifiedAt": "2026-11-15"
   }
 ]

@@ -35,7 +35,7 @@ export function EvidenceHeatmap({
       <CardHeader className="flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div>
           <span className="font-mono-telemetry text-[11px] text-[#0284C7] block">
-            Corpus Parameter Coverage Matrix
+            Tested-Pair Coverage Matrix
           </span>
           <CardTitle className="text-base">
             Oxygen Concentration vs. Forced Airflow Coverage
@@ -118,7 +118,21 @@ export function EvidenceHeatmap({
                       <span className="font-mono-telemetry text-[10px] text-[#64748B] truncate w-full mt-1">
                         {count === 0
                           ? 'No loaded record'
-                          : cell?.records.map((r) => r.investigationName).join(', ')}
+                          : // Several records share one investigation name (e.g. two
+                            // BASS-II records); collapse repeats so the preview
+                            // lists each investigation once, with its record count.
+                            (() => {
+                              const byInvestigation = new Map<string, number>();
+                              for (const r of cell?.records ?? []) {
+                                byInvestigation.set(
+                                  r.investigationName,
+                                  (byInvestigation.get(r.investigationName) ?? 0) + 1
+                                );
+                              }
+                              return [...byInvestigation.entries()]
+                                .map(([name, n]) => (n > 1 ? `${name} ×${n}` : name))
+                                .join(', ');
+                            })()}
                       </span>
                     </button>
                   );
@@ -148,7 +162,11 @@ export function EvidenceHeatmap({
               3+ records
             </span>
           </div>
-          <span>Study ranges may overlap multiple cells. A cell does not establish a tested oxygen–airflow pair.</span>
+          <span>
+            A record appears in a cell only when its reported point value, or
+            its full reported range, falls inside that bin. Records whose
+            range spans bins are listed below, not assigned to a single cell.
+          </span>
         </div>
       </CardContent>
     </Card>

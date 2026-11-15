@@ -2,6 +2,7 @@ export { cn } from 'cn';
 import type { MeasurementValue } from '@/types/flare';
 
 export function formatCompactParam(value: number | null, unit: string, range: [number, number] | null = null): string {
+  // Short on purpose: this is used inside narrow table cells.
   if (value !== null && Number.isFinite(value)) return `${value} ${unit}`;
   return range ? `Reported range: ${range[0]}–${range[1]} ${unit}` : 'Not reported';
 }

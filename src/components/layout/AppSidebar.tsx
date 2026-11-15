@@ -23,10 +23,11 @@ export interface NavItem {
   shortLabel: string;
   group: 'workspace' | 'archive';
   icon: React.ComponentType<{ className?: string }>;
+  featured?: boolean;
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { href: "/agent", label: "Research Agent", shortLabel: "Agent", group: "workspace", icon: Bot },
+  { href: "/agent", label: "Research Agent", shortLabel: "Agent", group: "workspace", icon: Bot, featured: true },
   {
     href: '/mission',
     label: 'Mission Mode',
@@ -124,9 +125,11 @@ export function AppSidebar({
             className={cn(
               'group relative flex items-center gap-2.5 rounded-lg text-[13px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0284C7]',
               isCompact ? 'justify-center h-9 w-9 mx-auto' : 'px-2.5 h-9',
-              isActive
-                ? 'bg-[#F1F5F9] text-[#0F172A] font-medium border border-[#E2E8F0]'
-                : 'text-[#334155] hover:bg-[#FFFFFF] hover:text-[#0F172A] border border-transparent'
+              item.featured
+                ? 'bg-[#FFF7ED] text-[#0F172A] font-semibold border border-[#FDBA74] shadow-[0_0_0_1px_rgba(249,115,22,0.15)]'
+                : isActive
+                  ? 'bg-[#F1F5F9] text-[#0F172A] font-medium border border-[#E2E8F0]'
+                  : 'text-[#334155] hover:bg-[#FFFFFF] hover:text-[#0F172A] border border-transparent'
             )}
           >
             {!isCompact && isActive ? (
@@ -138,13 +141,23 @@ export function AppSidebar({
             <Icon
               className={cn(
                 'w-4 h-4 shrink-0 transition-colors',
-                isActive
-                  ? 'text-[#D97706]'
-                  : 'text-[#64748B] group-hover:text-[#0284C7]'
+                item.featured
+                  ? 'text-[#EA580C]'
+                  : isActive
+                    ? 'text-[#D97706]'
+                    : 'text-[#64748B] group-hover:text-[#0284C7]'
               )}
             />
             {!isCompact ? (
               <span className="flex-1 truncate">{item.label}</span>
+            ) : null}
+            {!isCompact && item.featured ? (
+              <span className="shrink-0 rounded-full bg-[#EA580C] px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-white">
+                SI
+              </span>
+            ) : null}
+            {isCompact && item.featured ? (
+              <span aria-hidden="true" className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-[#EA580C] ring-2 ring-white" />
             ) : null}
           </Link>
         );

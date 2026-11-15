@@ -99,6 +99,8 @@ function normalizeEvidenceRecord(raw: Record<string, unknown>): Record<string, u
     burnDurationSec: 'Solid-sample burn duration',
     dropletBurnDuration: 'Droplet burn duration',
     forcedFlowDuration: 'Forced-flow protocol duration',
+    particleMeanDiameter: 'Smoke particle arithmetic mean diameter',
+    coolFlameDarkPeriod: 'Hot-to-cool flame dark period',
   };
   const normalizedMeasurements: MeasurementValue[] = Object.entries(meas)
     .filter(([key, value]) => key in labels && value !== null && typeof value === 'object')

@@ -10,7 +10,7 @@
 
 <img src="https://img.shields.io/badge/NASA_Space_Apps_Challenge-2026-0B3D91?style=for-the-badge&logo=nasa&logoColor=white" alt="NASA Space Apps Challenge 2026" />
 <img src="https://img.shields.io/badge/Research_scope-Pre--mission-0C7C86?style=for-the-badge" alt="Pre-mission research" />
-<img src="https://img.shields.io/badge/Corpus-24_records-F27A32?style=for-the-badge" alt="24 source-linked records" />
+<img src="https://img.shields.io/badge/Corpus-27_records-F27A32?style=for-the-badge" alt="27 source-linked records" />
 
 <br />
 
@@ -44,7 +44,7 @@ NASA's BASS-II rod study reports a **0.0385 mm/s rod-tip regression velocity** a
 | **Mission Mode** | Set an atmosphere, material, gravity context, and research question. See ranked evidence and export a Markdown or JSON brief. |
 | **Experiment Comparison** | Compare two records. Numerical charts require compatible quantities and units; unknown uncertainty is left unreported. |
 | **Evidence Explorer** | Explore oxygen/airflow coverage and gaps. Study-range overlap is labeled as range overlap, not proof of a paired test. |
-| **NASA Knowledge Base** | Search and filter 24 records (9 experimental observations + 15 investigation overviews) across 21 NASA investigations, inspect provenance, and open the linked NASA page. |
+| **NASA Knowledge Base** | Search and filter 27 records (12 experimental observations + 15 investigation overviews) across 21 NASA investigations, inspect provenance, and open the linked NASA page. |
 | **IGNIS Scenario Lab** | Change qualitative atmosphere and flow controls and inspect corpus coverage. It does not calculate flame spread or predict extinction. |
 | **3D Simulation Lab** | Change sample geometry, camera, and scene layers. The animation is illustrative; its flame and airflow are not experimental measurements or CFD. |
 
@@ -72,7 +72,7 @@ More detail: [judge demo script](docs/demo-script.md).
 
 ## 🧪 Evidence, AI, and known limits
 
-The current collection contains **24 evidence records and 21 investigation overviews**. Review depth varies: some findings have been rechecked against source tables; some added overviews are based on NASA abstracts; some older metadata retains prior review. The field inventory records source links, locations, and review status. It does not claim that every field has received a fresh full-text audit.
+The current collection contains **27 evidence records and 21 investigation overviews**. Review depth varies: some findings have been rechecked against source tables; some added overviews are based on NASA abstracts; some older metadata retains prior review. The field inventory records source links, locations, and review status. It does not claim that every field has received a fresh full-text audit.
 
 One discrepancy remains open: NASA's SAFFIRE-V publications report different atmosphere values for Sample V-4. FLARE shows the reports separately instead of combining them into a new range. The 34% oxygen / 56.5 kPa preset is illustrative planning context, not an established SAFFIRE-V test.
 

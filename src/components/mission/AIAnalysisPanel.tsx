@@ -34,12 +34,12 @@ export function AIAnalysisPanel({
 
   const modeBadgeLabel =
     analysis.responseMode === 'nvidia'
-      ? 'AI-Assisted Retrieval · NVIDIA NIM (Review Against Sources)'
+      ? 'AI-Selected Records · NVIDIA NIM · Text From Sources'
       : analysis.responseMode === 'gemini'
-        ? 'AI-Assisted Retrieval · Google Gemini (Review Against Sources)'
+        ? 'AI-Selected Records · Google Gemini · Text From Sources'
         : analysis.responseMode === 'openai'
-          ? 'AI-Assisted Retrieval · OpenAI (Review Against Sources)'
-          : 'Non-AI Evidence Summary · Deterministic Fallback';
+          ? 'AI-Selected Records · OpenAI · Text From Sources'
+          : 'Retrieval-Based Summary · No LLM Configured';
 
   return (
     <Card className="border-[#CBD5E1]">

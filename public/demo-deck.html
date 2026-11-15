@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLARE — Demo Deck | NASA Space Apps Challenge 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #0f172a; }
+  .deck { max-width: 1100px; margin: 0 auto; }
+  section { min-height: 100vh; background: #fff; padding: 64px 72px; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid #e2e8f0; }
+  section.dark { background: #102234; color: #fff; }
+  .kicker { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #ea580c; font-weight: 700; margin-bottom: 20px; }
+  .dark .kicker { color: #fdba74; }
+  h1 { font-size: 56px; line-height: 1.05; letter-spacing: -0.03em; }
+  h2 { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 18px; }
+  p { font-size: 19px; line-height: 1.6; color: #475569; max-width: 760px; }
+  .dark p { color: #cbd5e1; }
+  p.lead { font-size: 22px; }
+  ul { margin-top: 24px; list-style: none; }
+  li { font-size: 18px; line-height: 1.55; color: #334155; padding: 10px 0 10px 28px; position: relative; }
+  .dark li { color: #e2e8f0; }
+  li::before { content: "—"; position: absolute; left: 0; color: #ea580c; font-weight: 700; }
+  .stat-row { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; }
+  .stat { flex: 1; min-width: 160px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; }
+  .stat b { display: block; font-size: 34px; letter-spacing: -0.02em; color: #102234; }
+  .stat span { font-size: 13px; color: #64748b; }
+  .compare { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+  .card { flex: 1; min-width: 240px; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px; background: #f8fafc; }
+  .card h3 { font-size: 20px; margin-bottom: 8px; }
+  .card .num { font-size: 40px; font-weight: 800; color: #ea580c; letter-spacing: -0.02em; }
+  .card p { font-size: 15px; }
+  .foot { margin-top: 40px; font-size: 13px; color: #94a3b8; }
+  a { color: #0877a8; }
+  .dark a { color: #7dd3fc; }
+  .nav { position: fixed; right: 20px; bottom: 20px; background: #102234; color: #fff; font-size: 13px; padding: 8px 14px; border-radius: 999px; opacity: .85; }
+  @media print { body { background: #fff; } section { min-height: auto; page-break-after: always; padding: 48px; } .nav { display: none; } }
+  @media (max-width: 640px) { section { padding: 40px 24px; } h1 { font-size: 38px; } h2 { font-size: 30px; } }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="dark">
+  <div class="kicker">NASA Space Apps Challenge 2026 · Flame in Freefall</div>
+  <h1>FLARE</h1>
+  <p class="lead" style="margin-top:16px">SI-Powered Fire Safety Intelligence from microgravity combustion data.</p>
+  <p style="margin-top:16px">Team CH3 PyroShield Zero-G — Hamza Sailah, Karim El Assali, Mohamed Zaroual<br>
+  Live app: <a href="https://flare-space-apps.vercel.app">flare-space-apps.vercel.app</a><br>
+  Code: <a href="https://github.com/karimelassali/Nasa-flare-space-apps-2026">github.com/karimelassali/Nasa-flare-space-apps-2026</a></p>
+  <p class="foot">Slide 1 of 7</p>
+</section>
+
+<section>
+  <div class="kicker">01 · The problem</div>
+  <h2>Fire in space does not behave like fire on Earth.</h2>
+  <p>With little or no gravity to drive buoyant flow, flames in microgravity can be cooler, rounder, slower to spread — and at times unexpectedly persistent. On the ISS, and on future Moon and Mars missions where evacuation is impossible, a fire can become life-threatening in minutes.</p>
+  <ul>
+    <li>Decades of NASA experiments — BASS, Saffire, SoFIE, FLEX, ACME — hold the evidence.</li>
+    <li>That evidence lives in the PSI Data Repository: hundreds of investigations, hard to search and compare.</li>
+    <li>Scientists need a tool that turns those experiments into clear, usable fire-safety insight.</li>
+  </ul>
+  <p class="foot">Slide 2 of 7 · Sources: NASA Space Apps Challenge, “Flame in Freefall”; PSI Data Repository (psi.nasa.gov)</p>
+</section>
+
+<section>
+  <div class="kicker">02 · What FLARE is</div>
+  <h2>One workspace. Seven ways to explore the evidence.</h2>
+  <p>FLARE is an SI-powered, web-based dashboard that <b>summarizes, ranks, and interprets</b> NASA microgravity combustion experiments by flammability, data availability, and experimental relevance.</p>
+  <div class="stat-row">
+    <div class="stat"><b>27</b><span>source-linked records</span></div>
+    <div class="stat"><b>21</b><span>NASA investigations</span></div>
+    <div class="stat"><b>7</b><span>workspaces</span></div>
+    <div class="stat"><b>100%</b><span>records with a NASA source link</span></div>
+  </div>
+  <ul>
+    <li>Research Agent, Mission Mode, IGNIS Scenario Lab, 3D Simulation Lab, Evidence Explorer, Experiment Comparison, NASA Knowledge Base.</li>
+    <li>Data from the PSI Data Repository, enriched with NASA Technical Reports Server (NTRS) publications.</li>
+  </ul>
+  <p class="foot">Slide 3 of 7</p>
+</section>
+
+<section>
+  <div class="kicker">03 · The AI feature</div>
+  <h2>Ask in plain language. Get a record back.</h2>
+  <p>FLARE’s AI feature is the Research Agent: natural-language queries over the NASA corpus. Ask “Compare SAFFIRE-I and SAFFIRE-III” and it selects the relevant records and measurements — with the source behind every number.</p>
+  <ul>
+    <li>The model only <b>selects</b> existing record IDs and measurement keys. Scientific text is rendered deterministically from stored source fields — the model cannot invent a number.</li>
+    <li>Unknown citations or extra prose are rejected by a strict schema.</li>
+    <li>With no AI key configured, FLARE falls back to deterministic retrieval and says so on screen. The same evidence stays available.</li>
+    <li>Creative requests outside the corpus (poems, stories) are refused with a guide answer — this is a research tool, not a chatbot.</li>
+  </ul>
+  <p class="foot">Slide 4 of 7 · Providers: NVIDIA NIM, Google Gemini, OpenAI (server-side keys only)</p>
+</section>
+
+<section>
+  <div class="kicker">04 · Worked example — SAFFIRE &amp; FLEX</div>
+  <h2>Two experiments. One honest axis.</h2>
+  <div class="compare">
+    <div class="card">
+      <h3>SAFFIRE-I</h3>
+      <div class="num">1.8 mm/s</div>
+      <p>Flame spread rate · 420 s burn duration<br>Source: NASA Table 1, NTRS 20180005168</p>
+    </div>
+    <div class="card">
+      <h3>SAFFIRE-III</h3>
+      <div class="num">2.3 mm/s</div>
+      <p>Flame spread rate · 300 s burn duration<br>Source: NASA Table 1, NTRS 20180005168</p>
+    </div>
+    <div class="card">
+      <h3>FLEX-008</h3>
+      <div class="num">14.8 s</div>
+      <p>Droplet burn ending in <b>disruption, not extinction</b><br>Source: NASA/TP-2015-216046, Table IX</p>
+    </div>
+  </div>
+  <ul>
+    <li>Charts appear only when both records report the same quantity in the same unit.</li>
+    <li>Unreported uncertainty is labelled “Not reported” — never plotted as zero.</li>
+  </ul>
+  <p class="foot">Slide 5 of 7</p>
+</section>
+
+<section>
+  <div class="kicker">05 · Honest limits</div>
+  <h2>FLARE shows where the evidence stops.</h2>
+  <ul>
+    <li>Overview records do not supply missing measurements — FLARE never fills them in.</li>
+    <li>SAFFIRE-V publications report different atmosphere values for Sample V-4. FLARE shows them separately, not merged.</li>
+    <li>The 3D Simulation Lab is a conceptual illustration of chamber geometry — not CFD, not a measured flame shape, not a fire detector.</li>
+    <li>FLARE is a research and education tool. It is not flight hardware, not certified for onboard fire-safety decisions, and not endorsed by NASA.</li>
+  </ul>
+  <p class="foot">Slide 6 of 7</p>
+</section>
+
+<section class="dark">
+  <div class="kicker">06 · Try it</div>
+  <h2>Follow the flame. Follow the evidence.</h2>
+  <p>Live app: <a href="https://flare-space-apps.vercel.app">flare-space-apps.vercel.app</a><br>
+  Code &amp; data provenance: <a href="https://github.com/karimelassali/Nasa-flare-space-apps-2026">github.com/karimelassali/Nasa-flare-space-apps-2026</a></p>
+  <ul>
+    <li>Start with the Research Agent — ask it to compare SAFFIRE-I and SAFFIRE-III.</li>
+    <li>Then open Experiment Comparison, Evidence Explorer, and the NASA Knowledge Base.</li>
+  </ul>
+  <p class="foot">Slide 7 of 7 · Team CH3 PyroShield Zero-G · NASA Space Apps Challenge 2026</p>
+</section>
+
+</div>
+<div class="nav">FLARE demo deck · 7 slides · scroll or print to PDF</div>
+</body>
+</html>
