@@ -632,7 +632,7 @@ export default function MissionModePage() {
             <div className="px-5 py-3 border-t border-slate-200 bg-white flex flex-wrap items-center justify-between text-xs text-slate-600 gap-2">
               <div className="flex items-center gap-2">
                 <Badge variant="cyan">Flame in Freefall</Badge>
-                <span>AI-Powered Fire Safety Insights from Microgravity Combustion Data</span>
+                <span>SI-Powered Fire Safety Insights from Microgravity Combustion Data</span>
               </div>
               <Button variant="secondary" size="sm" onClick={() => setShowSplash(false)}>
                 Close

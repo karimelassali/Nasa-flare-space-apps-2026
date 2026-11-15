@@ -153,7 +153,7 @@ export function AppSidebar({
             ) : null}
             {!isCompact && item.featured ? (
               <span className="shrink-0 rounded-full bg-[#EA580C] px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-white">
-                AI
+                SI
               </span>
             ) : null}
             {isCompact && item.featured ? (
