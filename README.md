@@ -122,6 +122,12 @@ NASA publication data is linked to its source at the record level. Review the li
 
 </details>
 
+## 📄 License & Third-Party Attribution
+
+- **Original FLARE source code & project assets:** Licensed under the [Apache License 2.0](LICENSE).
+- **NASA data & publications:** Public-domain U.S. Government works (`17 U.S.C. § 105`), linked at the record level to NASA PSI and NTRS; review individual linked publications before redistributing third-party content.
+- **Third-party 3D equipment models (`public/models/*.glb`):** Generic visual hardware models published by 3D Assets under **CC0 1.0 Universal**; see [public/models/ATTRIBUTION.md](public/models/ATTRIBUTION.md) for source URLs and details.
+
 ## 👩‍🚀 Team PyroShield Zero-G
 
 - **Karim El Assali** Application development and engineering
