@@ -1,7 +1,8 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { BookOpen, Database, ExternalLink, FlaskConical, Layers } from 'lucide-react';
+import Link from 'next/link';
+import { BookOpen, Database, ExternalLink, Flame, FlaskConical, Grid2x2Check, Layers } from 'lucide-react';
 import { ExperimentDetailsDrawer } from '@/components/knowledge/ExperimentDetailsDrawer';
 import { KnowledgeTable } from '@/components/knowledge/KnowledgeTable';
 import { Badge } from '@/components/ui/badge';
@@ -10,11 +11,15 @@ import {
   getAllEvidenceRecords,
   getCorpusStatistics,
 } from '@/lib/evidence/repository';
+import { getPsiCorpusSummary } from '@/lib/evidence/psi-dataset';
+import { getSolidDatasetSummary } from '@/lib/evidence/solid-dataset';
 import type { EvidenceRecord } from '@/types/flare';
 
 export default function KnowledgeBasePage() {
   const records = useMemo(() => getAllEvidenceRecords(), []);
   const stats = useMemo(() => getCorpusStatistics(records), [records]);
+  const psiSummary = useMemo(() => getPsiCorpusSummary(), []);
+  const solidSummary = useMemo(() => getSolidDatasetSummary(), []);
   const [selectedRecord, setSelectedRecord] = useState<EvidenceRecord | null>(null);
 
   return (
@@ -25,7 +30,10 @@ export default function KnowledgeBasePage() {
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="cyan">NASA Empirical Repository</Badge>
             <Badge variant="outline" className="font-mono-telemetry">
-              {stats.totalRecords} Source-Linked Records
+              {stats.totalRecords} Curated Records
+            </Badge>
+            <Badge variant="warning" className="font-mono-telemetry">
+              +{psiSummary.totalRows} PSI Gas/Droplet &amp; {solidSummary.totalRows} BASS-II Solid Rows
             </Badge>
           </div>
           <h1 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0F172A]">
@@ -53,10 +61,10 @@ export default function KnowledgeBasePage() {
       {/* Tremor-style KPI Strip */}
       <Card>
         <CardContent className="p-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-6 gap-3">
             <div className="rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] p-3.5">
               <div className="flex items-center justify-between text-[11px] font-mono-telemetry uppercase tracking-wider text-[#64748B]">
-                <span>Total Corpus</span>
+                <span>Curated Corpus</span>
                 <Database className="w-3.5 h-3.5 text-[#0284C7]" />
               </div>
               <div className="mt-2 font-mono-telemetry text-2xl font-semibold text-[#0F172A] tabular-nums">
@@ -105,6 +113,38 @@ export default function KnowledgeBasePage() {
                 Distinct PSI / NTRS programs
               </div>
             </div>
+
+            <Link
+              href="/evidence"
+              className="rounded-lg bg-[#F8FAFC] border border-[#BAE6FD] hover:border-[#0284C7] p-3.5 transition-colors block"
+            >
+              <div className="flex items-center justify-between text-[11px] font-mono-telemetry uppercase tracking-wider text-[#0284C7]">
+                <span>PSI Gas/Droplet</span>
+                <Grid2x2Check className="w-3.5 h-3.5 text-[#0284C7]" />
+              </div>
+              <div className="mt-2 font-mono-telemetry text-2xl font-semibold text-[#0284C7] tabular-nums">
+                {psiSummary.totalRows}
+              </div>
+              <div className="mt-0.5 text-[11px] text-[#64748B]">
+                ACME · CFI · SPICE (Explorer →)
+              </div>
+            </Link>
+
+            <Link
+              href="/ignis"
+              className="rounded-lg bg-[#F8FAFC] border border-[#FDE68A] hover:border-[#D97706] p-3.5 transition-colors block"
+            >
+              <div className="flex items-center justify-between text-[11px] font-mono-telemetry uppercase tracking-wider text-[#D97706]">
+                <span>Solid Test Rows</span>
+                <Flame className="w-3.5 h-3.5 text-[#D97706]" />
+              </div>
+              <div className="mt-2 font-mono-telemetry text-2xl font-semibold text-[#D97706] tabular-nums">
+                {solidSummary.totalRows}
+              </div>
+              <div className="mt-0.5 text-[11px] text-[#64748B]">
+                BASS-II same-row checks →
+              </div>
+            </Link>
           </div>
         </CardContent>
       </Card>
