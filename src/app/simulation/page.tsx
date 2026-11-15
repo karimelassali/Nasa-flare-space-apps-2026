@@ -461,9 +461,9 @@ export default function SimulationLabPage() {
             {/* Boundary Condition Sliders */}
             <div className="space-y-3.5 pt-2 border-t border-[#F1F5F9]">
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-[#334155]">Oxygen Mole Fraction</span>
-                  <span className="font-mono-telemetry text-[#D97706] tabular-nums">
+                <div className="flex items-center justify-between gap-2 text-xs">
+                  <span className="text-[#334155] min-w-0 truncate">Oxygen Mole Fraction</span>
+                  <span className="font-mono-telemetry text-[#D97706] tabular-nums shrink-0 whitespace-nowrap leading-normal">
                     {oxygenPercent.toFixed(1)}% O₂
                   </span>
                 </div>
@@ -483,9 +483,9 @@ export default function SimulationLabPage() {
               </div>
 
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-[#334155]">Ambient Pressure</span>
-                  <span className="font-mono-telemetry text-[#0284C7] tabular-nums">
+                <div className="flex items-center justify-between gap-2 text-xs">
+                  <span className="text-[#334155] min-w-0 truncate">Ambient Pressure</span>
+                  <span className="font-mono-telemetry text-[#0284C7] tabular-nums shrink-0 whitespace-nowrap leading-normal">
                     {pressureKpa.toFixed(1)} kPa
                   </span>
                 </div>
@@ -505,9 +505,9 @@ export default function SimulationLabPage() {
               </div>
 
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-[#334155]">Forced Duct Airflow</span>
-                  <span className="font-mono-telemetry text-[#059669] tabular-nums">
+                <div className="flex items-center justify-between gap-2 text-xs">
+                  <span className="text-[#334155] min-w-0 truncate">Forced Duct Airflow</span>
+                  <span className="font-mono-telemetry text-[#059669] tabular-nums shrink-0 whitespace-nowrap leading-normal">
                     {airflowCms.toFixed(1)} cm/s
                   </span>
                 </div>

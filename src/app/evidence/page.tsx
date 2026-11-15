@@ -18,6 +18,7 @@ import {
   buildInvestigationDistribution,
   computeCorpusCompleteness,
   detectCorpusResearchGaps,
+  findRangeSpanningRecords,
   type HeatmapCell,
 } from '@/lib/matching/coverage';
 import { formatCompactParam } from '@/lib/utils';
@@ -121,6 +122,13 @@ export default function EvidenceAndGapsPage() {
   const heatmapCells = useMemo(
     () => buildCoverageHeatmap(filteredRecords),
     [filteredRecords]
+  );
+  // Records with oxygen/airflow data whose reported range spans bins:
+  // they establish no single tested pair, so they are listed separately
+  // instead of being repeated across every cell their range touches.
+  const rangeSpanningRecords = useMemo(
+    () => findRangeSpanningRecords(filteredRecords, heatmapCells),
+    [filteredRecords, heatmapCells]
   );
   const distribution = useMemo(
     () => buildInvestigationDistribution(filteredRecords),
@@ -358,6 +366,47 @@ export default function EvidenceAndGapsPage() {
       />
       </div>
 
+      {/* Range-spanning records: data exists, but no single tested pair */}
+      {rangeSpanningRecords.length > 0 ? (
+        <Card>
+          <CardHeader>
+            <span className="font-mono-telemetry text-[11px] text-[#D97706] block">
+              Range-Spanning Records — Not Assigned to a Single Cell
+            </span>
+            <CardTitle className="text-base">
+              {rangeSpanningRecords.length} record{rangeSpanningRecords.length === 1 ? '' : 's'} whose reported range spans bins
+            </CardTitle>
+            <CardDescription>
+              These records do have oxygen/airflow data, but a reported range
+              that crosses bin boundaries (for example a study range, not one
+              test point) does not establish a tested oxygen–airflow pair, so
+              they are not counted in any cell above.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              {rangeSpanningRecords.map((rec) => (
+                <div
+                  key={rec.id}
+                  className="rounded-lg bg-[#F8FAFC] border border-[#E2E8F0] p-4 flex flex-col gap-2"
+                >
+                  <div className="flex items-center justify-between gap-2 font-mono-telemetry text-[11px]">
+                    <span className="text-[#D97706]">{rec.investigationName}</span>
+                    <span className="text-[#0284C7]">{rec.id}</span>
+                  </div>
+                  <h4 className="font-display text-sm font-semibold text-[#0F172A]">
+                    {rec.experimentTitle}
+                  </h4>
+                  <span className="font-mono-telemetry text-[11px] text-[#64748B]">
+                    O₂: {formatCompactParam(rec.oxygenPercent, '%', rec.oxygenRangePct)} · Flow: {formatCompactParam(rec.airflowCms, 'cm/s', rec.airflowRangeCms)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      ) : null}
+
       {/* Selected Cell Inspector */}
       {selectedCell ? (
         <Card className="border-[#CBD5E1]">
@@ -398,7 +447,7 @@ export default function EvidenceAndGapsPage() {
                       <h4 className="font-display text-sm font-semibold text-[#0F172A]">
                         {rec.experimentTitle}
                       </h4>
-                      <p className="text-xs text-[#334155] line-clamp-2">
+                      <p className="text-xs text-[#334155] leading-relaxed">
                         {rec.findings}
                       </p>
                     </div>

@@ -33,7 +33,7 @@ export function EvidenceAnswer({ answer }: { answer: AgentAnswer }) {
       {analysis && <>
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <span className="rounded-md bg-sky-50 px-2.5 py-1 font-medium text-sky-800">
-            {analysis.responseMode === 'deterministic_fallback' ? 'Source summary · AI unavailable or not used' : `AI-assisted retrieval · ${analysis.responseMode === 'nvidia' ? 'NVIDIA' : analysis.responseMode === 'gemini' ? 'Gemini' : 'OpenAI'}`}
+            {analysis.responseMode === 'deterministic_fallback' ? 'Retrieval-based summary · No LLM configured' : `AI-selected records · ${analysis.responseMode === 'nvidia' ? 'NVIDIA' : analysis.responseMode === 'gemini' ? 'Gemini' : 'OpenAI'} · Text rendered from sources`}
           </span>
           <span className="text-slate-500">{answer.citations.length} cited records</span>
         </div>

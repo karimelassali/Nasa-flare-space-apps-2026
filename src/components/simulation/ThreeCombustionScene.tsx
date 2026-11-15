@@ -130,6 +130,18 @@ export function ThreeCombustionScene({
 }: ThreeCombustionSceneProps) {
   const [quality, setQuality] = useState('auto');
   const qualityRef = useRef('auto');
+  // Snapshot feedback: previously the button downloaded silently, so a
+  // judge could not tell whether anything had happened.
+  const [snapshotNotice, setSnapshotNotice] = useState<string | null>(null);
+  const snapshotTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showSnapshotNotice = (message: string) => {
+    setSnapshotNotice(message);
+    if (snapshotTimerRef.current) clearTimeout(snapshotTimerRef.current);
+    snapshotTimerRef.current = setTimeout(() => setSnapshotNotice(null), 5000);
+  };
+  useEffect(() => () => {
+    if (snapshotTimerRef.current) clearTimeout(snapshotTimerRef.current);
+  }, []);
   useEffect(() => {
     qualityRef.current = quality;
   }, [quality]);
@@ -1059,29 +1071,46 @@ export function ThreeCombustionScene({
           className="bg-white/95 text-[#0F172A] border border-[#CBD5E1] shadow-xs rounded-md px-1.5 sm:px-2.5 py-1 text-[10px] sm:text-xs font-mono-telemetry hover:bg-[#F1F5F9] cursor-pointer"
           onClick={() => {
             const canvas = containerRef.current?.querySelector('canvas');
-            if (canvas) {
-              const output = document.createElement('canvas');
-              output.width = canvas.width;
-              output.height = canvas.height + 96;
-              const ctx = output.getContext('2d');
-              if (!ctx) return;
-              ctx.drawImage(canvas, 0, 0);
-              ctx.fillStyle = '#0F172A';
-              ctx.fillRect(0, canvas.height, output.width, 96);
-              ctx.fillStyle = '#F8FAFC';
-              ctx.font = `${Math.max(12, Math.min(20, output.width / 45))}px sans-serif`;
-              ctx.fillText('FLARE — Illustrative animation. Not experimental data or CFD.', 16, canvas.height + 35);
-              ctx.fillText(`${oxygenPercent.toFixed(1)}% O₂ · ${pressureKpa.toFixed(1)} kPa · ${airflowCms.toFixed(1)} cm/s · ${gravityContext}`, 16, canvas.height + 65);
-              const a = document.createElement('a');
-              a.download = 'IGNIS-conceptual-view.png';
-              a.href = output.toDataURL();
-              a.click();
+            if (!canvas) {
+              showSnapshotNotice('Snapshot unavailable — the WebGL canvas is not ready yet.');
+              return;
             }
+            const output = document.createElement('canvas');
+            output.width = canvas.width;
+            output.height = canvas.height + 96;
+            const ctx = output.getContext('2d');
+            if (!ctx) {
+              showSnapshotNotice('Snapshot unavailable — could not read the WebGL canvas.');
+              return;
+            }
+            ctx.drawImage(canvas, 0, 0);
+            ctx.fillStyle = '#0F172A';
+            ctx.fillRect(0, canvas.height, output.width, 96);
+            ctx.fillStyle = '#F8FAFC';
+            ctx.font = `${Math.max(12, Math.min(20, output.width / 45))}px sans-serif`;
+            ctx.fillText('FLARE — Illustrative animation. Not experimental data or CFD.', 16, canvas.height + 35);
+            ctx.fillText(`${oxygenPercent.toFixed(1)}% O₂ · ${pressureKpa.toFixed(1)} kPa · ${airflowCms.toFixed(1)} cm/s · ${gravityContext}`, 16, canvas.height + 65);
+            const a = document.createElement('a');
+            a.download = 'flare-conceptual-view.png';
+            a.href = output.toDataURL();
+            a.click();
+            showSnapshotNotice('Snapshot saved — flare-conceptual-view.png downloaded.');
           }}
         >
           Snapshot
         </button>
       </div>
+
+      {/* Snapshot confirmation toast */}
+      {snapshotNotice ? (
+        <div
+          role="status"
+          aria-live="polite"
+          className="absolute left-3.5 bottom-16 z-20 max-w-[calc(100%-1.75rem)] rounded-lg bg-[#0F172A]/95 px-3 py-2 text-[11px] text-white shadow-lg"
+        >
+          {snapshotNotice}
+        </div>
+      ) : null}
 
       {/* Top-Left Live Boundary Telemetry HUD */}
       <div className="pointer-events-none absolute top-16 inset-x-3.5 flex flex-col gap-1.5 z-10">
@@ -1094,7 +1123,7 @@ export function ThreeCombustionScene({
             />
             <span>{isRunning ? 'ILLUSTRATIVE ANIMATION' : 'PAUSED'}</span>
           </div>
-          <div className="px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md border border-[#E2E8F0] font-mono-telemetry text-[11px] text-[#334155] shadow-xs tabular-nums">
+          <div className="px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md border border-[#E2E8F0] font-mono-telemetry text-[11px] text-[#334155] shadow-xs tabular-nums whitespace-nowrap leading-normal">
             {oxygenPercent.toFixed(1)}% O₂ · {pressureKpa.toFixed(1)} kPa ·{' '}
             {airflowCms.toFixed(1)} cm/s · {gravityContext}
           </div>

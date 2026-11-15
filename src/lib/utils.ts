@@ -2,8 +2,11 @@ export { cn } from 'cn';
 import type { MeasurementValue } from '@/types/flare';
 
 export function formatCompactParam(value: number | null, unit: string, range: [number, number] | null = null): string {
+  // Short on purpose: this is used inside narrow table cells. A range is
+  // shown as the range itself, not as a sentence — callers that need the
+  // "study range" explanation use formatNumericParam below.
   if (value !== null && Number.isFinite(value)) return `${value} ${unit}`;
-  return range ? `Study range: ${range[0]}–${range[1]} ${unit}` : 'Not reported';
+  return range ? `${range[0]}–${range[1]} ${unit}` : 'Not reported';
 }
 
 export function formatNumericParam(
@@ -11,8 +14,11 @@ export function formatNumericParam(
   unit: string,
   range: [number, number] | null = null
 ): string {
-  const point = formatCompactParam(value, unit);
-  return range ? `${point}; study range: ${range[0]}–${range[1]} ${unit} (not a single test)` : point;
+  if (!range) return value !== null && Number.isFinite(value) ? `${value} ${unit}` : 'Not reported';
+  if (value !== null && Number.isFinite(value)) {
+    return `${value} ${unit}; study range: ${range[0]}–${range[1]} ${unit} (not a single test)`;
+  }
+  return `Not reported; study range: ${range[0]}–${range[1]} ${unit} (not a single test)`;
 }
 
 export function formatMeasurementValue(measurement: MeasurementValue): string {
