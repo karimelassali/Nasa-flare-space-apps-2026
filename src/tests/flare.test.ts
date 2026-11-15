@@ -77,6 +77,13 @@ describe('FLARE Scientific Integrity & Core Engine', () => {
     expect(formatCompactParam(null, '%')).toBe('Not reported');
     expect(formatNumericParam(null, 'kPa', null)).toBe('Not reported');
     expect(formatNumericParam(null, '%', [15, 34])).toContain('Not reported');
+    expect(formatNumericParam(21, '%', [20.5, 21.5])).toBe(
+      '21 %; reported range: 20.5–21.5 % (see source conditions)'
+    );
+    expect(formatNumericParam(null, '%', [15, 34])).toBe(
+      'Not reported (point value); reported range: 15–34 % (see source conditions)'
+    );
+    expect(formatCompactParam(null, '%', [15, 34])).toBe('Reported range: 15–34 %');
   });
 
   it('3. Classifies evidence across all 5 tiers and never marks same-platform mismatch as Approximate condition match', () => {
