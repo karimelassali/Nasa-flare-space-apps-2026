@@ -50,6 +50,14 @@ export function ExperimentDetailsDrawer({
 
   if (!record) return null;
 
+  // A droplet record has no flame-spread rate to report, so a
+  // "Concurrent flame spread rate — Not reported" row is noise, not
+  // honesty. Show only measurements with a reported value; when none
+  // exists, the empty state below says so explicitly.
+  const reportedMeasurements = record.measurements.filter(
+    (m) => m.value !== null && Number.isFinite(m.value)
+  );
+
   const handleExportMarkdown = () => {
     const md = generateSingleRecordMarkdown(record);
     triggerBrowserDownload(
@@ -250,14 +258,17 @@ export function ExperimentDetailsDrawer({
               <div className="flex items-center justify-between gap-2">
                 <CardTitle>Recorded Measurements</CardTitle>
                 <span className="font-mono-telemetry text-[11px] text-[#64748B]">
-                  {record.measurements.length} {record.measurements.length === 1 ? 'metric' : 'metrics'}
+                  {reportedMeasurements.length} {reportedMeasurements.length === 1 ? 'metric' : 'metrics'}
+                  {reportedMeasurements.length !== record.measurements.length
+                    ? ` · ${record.measurements.length - reportedMeasurements.length} unreported omitted`
+                    : ''}
                 </span>
               </div>
             </CardHeader>
             <CardContent className="p-0">
-              {record.measurements.length === 0 ? (
+              {reportedMeasurements.length === 0 ? (
                 <p className="p-4 text-xs text-[#64748B]">
-                  Quantitative scalar metrics: Not reported for this overview record.
+                  Quantitative scalar metrics: Not reported for this record.
                 </p>
               ) : (
                 <Table>
@@ -269,7 +280,7 @@ export function ExperimentDetailsDrawer({
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {record.measurements.map((m) => (
+                    {reportedMeasurements.map((m) => (
                       <TableRow key={m.key}>
                         <TableCell className="text-[#0F172A] font-medium">
                           {m.label}
@@ -277,7 +288,10 @@ export function ExperimentDetailsDrawer({
                         <TableCell className="font-mono-telemetry text-[#0284C7] tabular-nums whitespace-nowrap">
                           {formatMeasurementValue(m)}
                         </TableCell>
-                        <TableCell className="text-[11px] text-[#334155] leading-snug">
+                        <TableCell
+                          className="text-[11px] text-[#334155] leading-snug line-clamp-2"
+                          title={m.conditionNote}
+                        >
                           {m.conditionNote}
                         </TableCell>
                       </TableRow>

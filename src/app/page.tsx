@@ -45,6 +45,7 @@ const workspaces = [
     href: '/agent',
     label: 'Open the agent',
     color: 'sky',
+    featured: true,
   },
   {
     number: '02',
@@ -441,11 +442,22 @@ export default function LandingPage() {
                   <LandingReveal key={workspace.number} delay={index * 0.07} className="h-full">
                     <Link
                       href={workspace.href}
-                      className="landing-workspace group flex h-full min-h-[258px] flex-col rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_18px_45px_rgba(15,35,55,0.08)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 sm:p-6"
+                      className={`landing-workspace group flex h-full min-h-[258px] flex-col rounded-2xl border p-5 transition duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 sm:p-6 ${
+                        'featured' in workspace && workspace.featured
+                          ? 'border-[#FDBA74] bg-gradient-to-b from-[#FFF7ED] to-white shadow-[0_18px_45px_rgba(234,88,12,0.12)] hover:border-[#EA580C]'
+                          : 'border-slate-200 bg-white hover:border-slate-300 hover:shadow-[0_18px_45px_rgba(15,35,55,0.08)]'
+                      }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-mono text-[10px] tracking-[0.12em] text-slate-400">
-                          WORKSPACE / {workspace.number}
+                        <span className="flex items-center gap-2">
+                          <span className="font-mono text-[10px] tracking-[0.12em] text-slate-400">
+                            WORKSPACE / {workspace.number}
+                          </span>
+                          {'featured' in workspace && workspace.featured ? (
+                            <span className="rounded-full bg-[#EA580C] px-2 py-0.5 text-[9px] font-bold tracking-wide text-white">
+                              START HERE · SI
+                            </span>
+                          ) : null}
                         </span>
                         <span className={`landing-icon landing-icon-${workspace.color}`}>
                           <Icon className="h-[17px] w-[17px]" />

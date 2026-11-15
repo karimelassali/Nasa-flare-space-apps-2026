@@ -269,6 +269,20 @@ export function KnowledgeTable({ records, onSelectRecord }: KnowledgeTableProps)
           </div>
         ) : (
           <Table>
+            {/* Explicit column widths so the 9-column table fits the
+                content column at desktop width instead of pushing the
+                Type / Inspect columns off-screen. */}
+            <colgroup>
+              <col style={{ width: 118 }} />
+              <col style={{ width: 104 }} />
+              <col />
+              <col style={{ width: 84 }} />
+              <col style={{ width: 88 }} />
+              <col style={{ width: 96 }} />
+              <col style={{ width: 92 }} />
+              <col style={{ width: 92 }} />
+              <col style={{ width: 76 }} />
+            </colgroup>
             <TableHeader>
               <TableRow className="hover:bg-transparent">
                 <TableHead>
@@ -347,7 +361,7 @@ export function KnowledgeTable({ records, onSelectRecord }: KnowledgeTableProps)
                   <TableCell className="font-medium text-[#0F172A] whitespace-nowrap">
                     {record.investigationName}
                   </TableCell>
-                  <TableCell className="min-w-[230px]">
+                  <TableCell className="min-w-[170px]">
                     <div className="flex flex-col gap-0.5">
                       <span className="text-xs text-[#0F172A] font-medium line-clamp-1 group-hover:text-[#D97706] transition-colors">
                         {record.experimentTitle}

@@ -110,7 +110,7 @@ export default function KnowledgeBasePage() {
       </Card>
 
       {/* Main Searchable & Filterable Data Table */}
-      <div data-tour="knowledge-table">
+      <div data-tour="knowledge-table" className="min-w-0">
         <KnowledgeTable
           records={records}
           onSelectRecord={(record) => setSelectedRecord(record)}

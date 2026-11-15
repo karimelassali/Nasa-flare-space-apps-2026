@@ -44,15 +44,27 @@ export interface HeatmapCell {
   count: number;
 }
 
-function recordOverlapsRange(
+/**
+ * A record belongs in a bin only when its tested conditions actually fall
+ * inside that bin: a reported point value must lie in the bin, and a
+ * reported range must lie wholly inside the bin. A range that merely
+ * overlaps a bin (e.g. BASS-II's 16.4–21.0% O₂ or 1–53 cm/s airflow)
+ * spans several bins and therefore establishes no single tested pair —
+ * such records are not assigned to any cell (see findRangeSpanningRecords).
+ * Point values with no range, and ranges with no point value, are handled
+ * the same way: whatever is reported must be fully inside the bin.
+ */
+function recordInBin(
   point: number | null,
   range: [number, number] | null,
   bin: OxygenBin | AirflowBin
 ): boolean {
-  const overlaps = ([low, high]: [number, number]) =>
-    (bin.maxExclusive ? low < bin.max : low <= bin.max) &&
-    (bin.minExclusive ? high > bin.min : high >= bin.min);
-  return (range !== null && overlaps(range)) || (point !== null && overlaps([point, point]));
+  const inBin = (v: number) =>
+    (bin.minExclusive ? v > bin.min : v >= bin.min) &&
+    (bin.maxExclusive ? v < bin.max : v <= bin.max);
+  if (point !== null && !inBin(point)) return false;
+  if (range !== null && (!inBin(range[0]) || !inBin(range[1]))) return false;
+  return point !== null || range !== null;
 }
 
 export function buildCoverageHeatmap(records: EvidenceRecord[]): HeatmapCell[] {
@@ -62,16 +74,8 @@ export function buildCoverageHeatmap(records: EvidenceRecord[]): HeatmapCell[] {
     for (const fBin of AIRFLOW_BINS) {
       const matching = records.filter(
         (rec) =>
-          recordOverlapsRange(
-            rec.oxygenPercent,
-            rec.oxygenRangePct,
-            oBin
-          ) &&
-          recordOverlapsRange(
-            rec.airflowCms,
-            rec.airflowRangeCms,
-            fBin
-          )
+          recordInBin(rec.oxygenPercent, rec.oxygenRangePct, oBin) &&
+          recordInBin(rec.airflowCms, rec.airflowRangeCms, fBin)
       );
 
       cells.push({
@@ -86,6 +90,27 @@ export function buildCoverageHeatmap(records: EvidenceRecord[]): HeatmapCell[] {
   }
 
   return cells;
+}
+
+/**
+ * Records that carry oxygen/airflow data but match no heatmap cell because
+ * a reported range spans more than one bin. These are range-spanning
+ * studies, not missing data — they must be shown separately, not forced
+ * into a cell they do not establish.
+ */
+export function findRangeSpanningRecords(
+  records: EvidenceRecord[],
+  cells: HeatmapCell[]
+): EvidenceRecord[] {
+  const placed = new Set(cells.flatMap((c) => c.records.map((r) => r.id)));
+  return records.filter(
+    (r) =>
+      !placed.has(r.id) &&
+      (r.oxygenPercent !== null ||
+        r.oxygenRangePct !== null ||
+        r.airflowCms !== null ||
+        r.airflowRangeCms !== null)
+  );
 }
 
 export interface InvestigationDistributionItem {

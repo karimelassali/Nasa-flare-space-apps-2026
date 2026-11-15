@@ -22,6 +22,12 @@ export function ExperimentSelector({
   onChangeB,
   onSwap,
 }: ExperimentSelectorProps) {
+  // A native <select> cannot wrap its closed value, so long experiment
+  // titles were truncated mid-word. The closed label is therefore kept
+  // short and unique (investigation · record ID), and the full experiment
+  // title is rendered wrapped directly underneath, where it always fits.
+  const selectedA = records.find((r) => r.id === selectedAId);
+  const selectedB = records.find((r) => r.id === selectedBId);
   return (
     <Card>
       <CardContent className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-end gap-4">
@@ -40,10 +46,15 @@ export function ExperimentSelector({
           >
             {records.map((rec) => (
               <option key={rec.id} value={rec.id} disabled={rec.id === selectedBId}>
-                [{rec.investigationName} · {rec.investigationId}] {rec.experimentTitle}
+                {rec.investigationName} · {rec.id}
               </option>
             ))}
           </select>
+          {selectedA ? (
+            <p className="text-xs text-[#334155] leading-snug" title={selectedA.experimentTitle}>
+              {selectedA.experimentTitle}
+            </p>
+          ) : null}
         </div>
 
         <Button
@@ -73,10 +84,15 @@ export function ExperimentSelector({
           >
             {records.map((rec) => (
               <option key={rec.id} value={rec.id} disabled={rec.id === selectedAId}>
-                [{rec.investigationName} · {rec.investigationId}] {rec.experimentTitle}
+                {rec.investigationName} · {rec.id}
               </option>
             ))}
           </select>
+          {selectedB ? (
+            <p className="text-xs text-[#334155] leading-snug" title={selectedB.experimentTitle}>
+              {selectedB.experimentTitle}
+            </p>
+          ) : null}
         </div>
       </CardContent>
     </Card>

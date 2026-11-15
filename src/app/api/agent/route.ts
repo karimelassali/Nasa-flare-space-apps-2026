@@ -37,6 +37,34 @@ export async function POST(request: Request) {
       actions: (matchedPages.length ? matchedPages : pages).map(({ label, href, description }) => ({ label, href, description })), citations: [], contextIds,
     });
     let chosen = retrieveQuestionRecords(message, records, contextIds);
+    // Creative-writing requests (a haiku, poem, story, joke…) are not
+    // evidence questions. Without this guard, keyword retrieval would
+    // answer them with the same templated SAFFIRE records as a real
+    // research question. Decline them instead — but only when no NASA
+    // record or investigation was actually named.
+    const isCreativeRequest =
+      /\b(haiku|poem|poetry|limerick|story|joke|song|lyrics?|essay|novel|rap|riddle)\b/i.test(message);
+    if (isCreativeRequest && !mentions.length) {
+      return NextResponse.json({
+        kind: 'guide',
+        answer:
+          'This query is outside FLARE\'s NASA microgravity combustion corpus. I do not write poems, stories, jokes or other creative text — I only answer research questions about the corpus. Ask about an experiment, material or condition, for example "Compare SAFFIRE-I and SAFFIRE-III".',
+        actions: [
+          {
+            label: 'Browse NASA Knowledge Base',
+            href: '/knowledge',
+            description: 'Inspect all 27 audited records across 21 NASA microgravity combustion investigations.',
+          },
+          {
+            label: 'Configure Scenario in Mission Mode',
+            href: '/mission',
+            description: 'Test oxygen, pressure, airflow, and material boundary conditions against the corpus.',
+          },
+        ],
+        citations: [],
+        contextIds,
+      });
+    }
     if (!chosen.length) {
       return NextResponse.json({
         kind: 'guide',
@@ -46,7 +74,7 @@ export async function POST(request: Request) {
           {
             label: 'Browse NASA Knowledge Base',
             href: '/knowledge',
-            description: 'Inspect all 24 audited records across 21 NASA microgravity combustion investigations.',
+            description: 'Inspect all 27 audited records across 21 NASA microgravity combustion investigations.',
           },
           {
             label: 'Configure Scenario in Mission Mode',

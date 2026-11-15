@@ -358,5 +358,29 @@
     "locator": "Investigation summary; see linked evidence audit",
     "reviewedAt": "2026-11-14",
     "scope": "Summary provenance; campaign metadata is not a single experimental observation."
+  },
+  "EV-SAME-02": {
+    "level": "abstract_reviewed",
+    "label": "NASA overview reviewed",
+    "sourceUrl": "https://www.nasa.gov/wp-content/uploads/2025/07/smoke-aerosol-measurement-experiment-same.pdf",
+    "locator": "NASA SAME fact sheet, Publications section: Expedition 15 results; silicone rubber AMD 227 nm, almost half the particle mass larger than 1000 nm",
+    "reviewedAt": "2026-11-15",
+    "scope": "Silicone rubber AMD and mass-fraction claims checked against the NASA fact sheet; per-test conditions for the AMD value are not tabulated in the source."
+  },
+  "EV-ACME-BRE-02": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210022542",
+    "locator": "Stocker, NTRS 20210022542 (JASMAC-33, 2021), BRE slide",
+    "reviewedAt": "2026-11-15",
+    "scope": "BRE self-extinction below ~25% O2, minutes-long still-air burning, and 1.5-minute larger-flame bound rechecked against the NASA presentation slide."
+  },
+  "EV-ACME-CFIG-02": {
+    "level": "table_reviewed",
+    "label": "NASA table reviewed",
+    "sourceUrl": "https://ntrs.nasa.gov/citations/20210022542",
+    "locator": "Stocker, NTRS 20210022542 (JASMAC-33, 2021), CFI-G slide; UMD FPE release 7 July 2021 for 23 June 2021 conditions",
+    "reviewedAt": "2026-11-15",
+    "scope": "First steady spherical cool flames, 6.35 mm burner, ~1 s dark period rechecked against the NASA slide; 40% O2 / 2 atm conditions from the UMD project release."
   }
 }

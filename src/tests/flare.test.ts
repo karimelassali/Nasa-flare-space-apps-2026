@@ -54,7 +54,7 @@ describe('FLARE Scientific Integrity & Core Engine', () => {
     expect(() => InvestigationCorpusSchema.parse(investigations)).not.toThrow();
 
     for (const rec of evidence) {
-      expect(rec.sourceUrl).toMatch(/^https:\/\/(psi|ntrs|science|gipoc\.grc)\.nasa\.gov\//);
+      expect(rec.sourceUrl).toMatch(/^https:\/\/(psi|ntrs|science|gipoc\.grc|www)\.nasa\.gov\//);
       expect(rec.sourceDocument.length).toBeGreaterThan(5);
       expect(rec.evidenceLimitations.length).toBeGreaterThan(0);
     }

@@ -1,6 +1,6 @@
 # Scientific provenance
 
-The current corpus contains 24 evidence records and 21 investigation overviews. `evidence-audit.json` inventories 1,083 current leaf fields with their values, source URLs, locators, units, and review depth. It distinguishes freshly checked tables, public abstracts, retained prior reviews, interpretations, and fields requiring manual review. This is not a claim that every field has received a fresh full-text review.
+The current corpus contains 27 evidence records and 21 investigation overviews. `evidence-audit.json` inventories 1,201 current leaf fields with their values, source URLs, locators, units, and review depth. It distinguishes freshly checked tables, public abstracts, retained prior reviews, interpretations, and fields requiring manual review. This is not a claim that every field has received a fresh full-text review.
 
 Original claims and corrections remain in `evidence-audit-history.json` and `evidence-audit-remediation-history.json`. They are historical records, not application inputs. Rebuild the active inventory with `python scripts/export-current-audit.py`.
 
@@ -11,5 +11,7 @@ NASA/TP-2015-216046 Table IX, printed page 20, was visually checked: FLEX-008 re
 Rod regression, concurrent spread, maximum opposed rib spread, study oxygen boundaries, and programmed flow duration have distinct quantity keys/scopes. Comparison requires compatible quantity, scope and units. Unknown uncertainty is never zero. Study ranges do not establish paired test conditions.
 
 SAFFIRE-V remains unresolved: NTRS 20210017838 reports 26.9 vol% oxygen and 761 hPa (76.1 kPa), while NTRS 20210011521 Table 1 reports V-4 at 25.7 mol% and 72.6 kPa. Both are disclosed; they are not combined into a synthetic range. The 34% / 56.5 kPa scenario is illustrative planning context, not a verified SAFFIRE-V test.
+
+Three observation records added 2026-11-15 to cover the thin SAME and ACME datasets with verified numbers only. SAME: the NASA SAME fact sheet reports a silicone rubber arithmetic mean particle diameter of 227 nm, with almost half the particle mass larger than 1000 nm (EV-SAME-02). ACME: Stocker, NTRS 20210022542 (JASMAC-33, 2021) reports BRE gas flames self-extinguishing below ~25% oxygen by volume in still air (EV-ACME-BRE-02), and the first steady spherical cool diffusion flames of gaseous n-butane on 23 June 2021 at 40% oxygen in nitrogen and 2 atm, with a ~1 s dark period between hot-flame quench and cool-flame appearance on a 6.35 mm porous spherical burner (EV-ACME-CFIG-02). The ~25% value is an approximate reported threshold, not a standard LOI test; the cool-flame temperatures (600–1000 K) are reported ranges, not per-test measurements.
 
 Thirteen additional overview records were narrowed to NASA public abstracts/overviews. Unsupported cabin conditions and inferred outcomes were removed. BRE ground-facility results are identified as ground microgravity research; DAFT is an instrument study. Further full-text extraction and independent scientific review remain necessary before claiming comprehensive validation.
