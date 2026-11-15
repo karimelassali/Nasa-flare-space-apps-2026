@@ -53,7 +53,7 @@ export async function POST(request: Request) {
           {
             label: 'Browse NASA Knowledge Base',
             href: '/knowledge',
-            description: 'Inspect all 24 audited records across 21 NASA microgravity combustion investigations.',
+            description: 'Inspect all 27 audited records across 21 NASA microgravity combustion investigations.',
           },
           {
             label: 'Configure Scenario in Mission Mode',
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
           {
             label: 'Browse NASA Knowledge Base',
             href: '/knowledge',
-            description: 'Inspect all 24 audited records across 21 NASA microgravity combustion investigations.',
+            description: 'Inspect all 27 audited records across 21 NASA microgravity combustion investigations.',
           },
           {
             label: 'Configure Scenario in Mission Mode',

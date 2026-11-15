@@ -40,7 +40,7 @@ const GUIDE_STEPS: DriveStep[] = [
     element: '[data-tour="agent-workspace"]',
     popover: {
       title: '1. How the Research Agent works',
-      description: 'The Research Agent routes your question either to FLARE navigation help or to evidence-ranked synthesis across 21 NASA investigations and 24 source-linked records. Every answer includes inline NASA citations, limitations, next-step links, and downloadable markdown briefs.',
+      description: 'The Research Agent routes your question either to FLARE navigation help or to evidence-ranked synthesis across 21 NASA investigations and 27 source-linked records. Every answer includes inline NASA citations, limitations, next-step links, and downloadable markdown briefs.',
       side: 'top',
     },
   },
@@ -56,7 +56,7 @@ const GUIDE_STEPS: DriveStep[] = [
     element: '[data-tour="agent-capabilities"]',
     popover: {
       title: '3. Scientific transparency & guardrails',
-      description: 'Each response explicitly badges whether it used SI synthesis or deterministic non-SI evidence fallback, and links directly to primary NASA Technical Report Server (NTRS) sources for independent verification.',
+      description: 'Each response explicitly badges whether it used AI synthesis or deterministic non-AI evidence fallback, and links directly to primary NASA Technical Report Server (NTRS) sources for independent verification.',
       side: 'left',
     },
   },

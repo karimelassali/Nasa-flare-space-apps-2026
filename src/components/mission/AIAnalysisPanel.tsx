@@ -34,11 +34,11 @@ export function AIAnalysisPanel({
 
   const modeBadgeLabel =
     analysis.responseMode === 'nvidia'
-      ? 'SI-Selected Records · NVIDIA NIM · Text From Sources'
+      ? 'AI-Selected Records · NVIDIA NIM · Text From Sources'
       : analysis.responseMode === 'gemini'
-        ? 'SI-Selected Records · Google Gemini · Text From Sources'
+        ? 'AI-Selected Records · Google Gemini · Text From Sources'
         : analysis.responseMode === 'openai'
-          ? 'SI-Selected Records · OpenAI · Text From Sources'
+          ? 'AI-Selected Records · OpenAI · Text From Sources'
           : 'Retrieval-Based Summary · No LLM Configured';
 
   return (
@@ -57,7 +57,7 @@ export function AIAnalysisPanel({
               Research Interpretation &amp; Uncertainty Brief
             </CardTitle>
             <CardDescription>
-              SI selects relevant records; scientific text comes from stored source fields. Review each record’s provenance and limitations.
+              AI selects relevant records; scientific text comes from stored source fields. Review each record’s provenance and limitations.
             </CardDescription>
           </div>
         </div>

@@ -148,7 +148,7 @@ const faqs = [
       'The corpus links to NASA Physical Sciences Informatics (PSI) records and NASA Technical Reports Server (NTRS) publications. Each record keeps its own source link, review-depth label, and condition notes.',
   },
   {
-    question: 'Does it still work without an SI provider?',
+    question: 'Does it still work without an AI provider?',
     answer:
       'Yes. With no provider key — or when a provider request fails — FLARE falls back to a deterministic, source-based response built from the same local corpus. The interface labels which mode produced the answer.',
   },
@@ -482,7 +482,7 @@ export default function LandingPage() {
             <div className="mt-5 grid gap-3 rounded-2xl border border-slate-200/80 bg-[#FAFBFD] p-4 sm:grid-cols-3 sm:p-5">
               {[
                 { icon: Download, title: 'Portable research briefs', text: 'Markdown and JSON exports from supported workflows.' },
-                { icon: Sparkles, title: 'Optional SI assistance', text: 'Provider-backed analysis with a deterministic corpus fallback.' },
+                { icon: Sparkles, title: 'Optional AI assistance', text: 'Provider-backed analysis with a deterministic corpus fallback.' },
                 { icon: ExternalLink, title: 'Traceable sources', text: 'Open linked NASA reports and PSI source pages.' },
               ].map((item, index) => {
                 const Icon = item.icon;

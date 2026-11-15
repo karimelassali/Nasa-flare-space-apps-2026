@@ -23,7 +23,7 @@ const TABS = [
       'Every answer names the investigation, the measurement, and the NASA source behind it. When the model tries to cite something that is not in the corpus, the selection is rejected.',
     points: [
       'Cited record IDs with direct NTRS links',
-      'Deterministic fallback when no SI key is configured',
+      'Deterministic fallback when no AI key is configured',
       'Comparison hand-off keeps both records selected',
     ],
     href: '/agent',

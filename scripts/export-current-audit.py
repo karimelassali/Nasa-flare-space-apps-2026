@@ -87,9 +87,9 @@ for kind, path in [('evidence', 'src/data/evidence.json'), ('investigation', 'sr
         summary.append({'id': record['id'], 'kind': kind, **provenance[record['id']]})
 
 audit = {
-    'reviewedAt': '2026-11-14',
+    'reviewedAt': '2026-11-15',
     'method': 'Current leaf-field inventory with explicit review depth. Not every field was independently rechecked; prior reviews and manual-review fields are labeled. No missing measurement is inferred. A source URL alone is not verification.',
-    'evidenceCount': 24, 'investigationCount': 21,
+    'evidenceCount': 27, 'investigationCount': 21,
     'historyFiles': ['docs/evidence-audit-history.json', 'docs/evidence-audit-remediation-history.json'],
     'statusCounts': dict(collections.Counter(row['status'] for row in rows)),
     'recordCoverage': summary,

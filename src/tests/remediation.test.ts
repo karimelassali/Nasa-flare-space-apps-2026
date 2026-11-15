@@ -78,7 +78,7 @@ describe('Submission regression checks', () => {
     expect(invalid.status).toBe(400);
   });
 
-  it('covers all 24 records and 21 overviews with explicit review depth, without assumed cabin values', () => {
+  it('covers all 27 records and 21 overviews with explicit review depth, without assumed cabin values', () => {
     for (const record of [...records, ...getAllInvestigations()]) {
       const provenance = getRecordProvenance(record.id);
       expect(provenance.level).not.toBe('manual_review');
