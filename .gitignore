@@ -18,6 +18,9 @@
 # Testing & Coverage
 /coverage
 
+# Freebuff
+.freebuff/
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts

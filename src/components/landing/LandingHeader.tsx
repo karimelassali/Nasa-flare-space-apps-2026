@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
+  { href: '#video-presentation', label: 'Project Video' },
   { href: '#approach', label: 'Approach' },
   { href: '#cover', label: 'The cover' },
   { href: '#inside', label: 'Inside FLARE' },

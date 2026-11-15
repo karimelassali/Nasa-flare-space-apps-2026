@@ -22,6 +22,7 @@ import { EnvironmentControls } from '@/components/mission/EnvironmentControls';
 import { EvidenceCard } from '@/components/mission/EvidenceCard';
 import { AIAnalysisPanel } from '@/components/mission/AIAnalysisPanel';
 import { MaterialScreeningMatrix } from '@/components/mission/MaterialScreeningMatrix';
+import { SameRowVerdictPanel } from '@/components/evidence/SameRowVerdictPanel';
 import { ExportControls } from '@/components/mission/ExportControls';
 import { ExperimentDetailsDrawer } from '@/components/knowledge/ExperimentDetailsDrawer';
 import { LoadingState } from '@/components/ui/LoadingState';
@@ -586,6 +587,8 @@ export default function MissionModePage() {
           </section>
         </div>
       ) : null}
+
+      <SameRowVerdictPanel />
 
       <ExperimentDetailsDrawer
         record={inspectedRecord}

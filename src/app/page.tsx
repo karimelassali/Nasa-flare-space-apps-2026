@@ -18,6 +18,7 @@ import {
   Grid2X2Check,
   Layers,
   Orbit,
+  Play,
   Ruler,
   Rocket,
   ScanSearch,
@@ -218,6 +219,13 @@ export default function LandingPage() {
                   See a real comparison
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
+                <a
+                  href="#video-presentation"
+                  className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-amber-300/30 bg-amber-400/10 px-6 text-[13px] font-semibold text-amber-200 transition hover:border-amber-300/60 hover:bg-amber-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200"
+                >
+                  <Play className="h-3.5 w-3.5 fill-current text-amber-300 transition-transform group-hover:scale-110" />
+                  Watch project video
+                </a>
                 <Link
                   href="/evidence"
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/15 px-6 text-[13px] font-semibold text-white transition hover:border-white/35 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-200"
@@ -296,12 +304,134 @@ export default function LandingPage() {
           </div>
 
           <a
-            href="#approach"
+            href="#video-presentation"
             className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-slate-400 transition hover:text-slate-300 sm:flex"
           >
-            Scroll to explore
+            Watch project video
             <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
           </a>
+        </section>
+
+        {/* PROJECT VIDEO & JUDGE WALKTHROUGH */}
+        <section
+          id="video-presentation"
+          aria-labelledby="video-presentation-title"
+          className="relative isolate scroll-mt-24 overflow-hidden border-y border-white/10 bg-[#071421] py-16 text-white sm:py-20 lg:py-24"
+        >
+          <div aria-hidden="true" className="landing-stars absolute inset-0 -z-20 opacity-70" />
+          <div aria-hidden="true" className="landing-stars landing-stars-twinkle absolute inset-0 -z-20 opacity-50" />
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 -z-10 h-[500px] w-[880px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-sky-500/10 via-amber-500/10 to-orange-500/15 blur-3xl"
+          />
+
+          <div className="mx-auto max-w-[1150px] px-5 sm:px-8 lg:px-12">
+            <LandingReveal className="text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-300 sm:text-[12px]">
+                <Play className="h-3 w-3 fill-current text-amber-400" />
+                NASA Space Apps 2026 · Project Showcase
+              </div>
+
+              <h2
+                id="video-presentation-title"
+                className="landing-h2 mt-4 text-white"
+              >
+                Project Presentation &amp; Video Walkthrough
+              </h2>
+              <p className="mx-auto mt-3 max-w-[680px] text-[14px] leading-relaxed text-slate-300 sm:text-[15px]">
+                Prepared for hackathon judges — an executive walkthrough of the FLARE platform,
+                how we map NASA microgravity combustion research, and our source-linked verification model.
+              </p>
+            </LandingReveal>
+
+            {/* Video Player Box */}
+            <LandingReveal delay={0.12} className="mt-10 sm:mt-12">
+              <div className="relative mx-auto max-w-[960px] overflow-hidden rounded-[22px] border border-white/15 bg-[#0C1A2A]/90 p-2.5 shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-sm sm:rounded-[28px] sm:p-4">
+                {/* Header bar */}
+                <div className="mb-2.5 flex items-center justify-between px-2 sm:mb-3 sm:px-3">
+                  <div className="flex items-center gap-1.5" aria-hidden="true">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#F87171]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#FBBF24]" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#34D399]" />
+                  </div>
+                  <span className="font-mono text-[10px] tracking-[0.12em] text-slate-400 sm:text-[11px]">
+                    FLARE · JUDGE DEMONSTRATION VIDEO
+                  </span>
+                  <a
+                    href="https://youtu.be/J2-H4B5itek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
+                  >
+                    <span>Open on YouTube</span>
+                    <ExternalLink className="h-3 w-3 text-sky-300" />
+                  </a>
+                </div>
+
+                {/* 16:9 Iframe Wrapper */}
+                <div className="relative aspect-video w-full overflow-hidden rounded-[16px] border border-white/10 bg-black sm:rounded-[20px]">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/J2-H4B5itek?rel=0&amp;modestbranding=1"
+                    title="FLARE — Microgravity Fire Safety Intelligence | NASA Space Apps Challenge 2026"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Footer notes */}
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 px-2 text-[11px] text-slate-400 sm:px-3 sm:text-[12px]">
+                  <span className="inline-flex items-center gap-2 text-slate-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34D399]" />
+                    Official Submission Video · Flame in Freefall Challenge
+                  </span>
+                  <span className="font-mono text-[11px] text-slate-500">
+                    NASA PSI &amp; NTRS Research Evidence
+                  </span>
+                </div>
+              </div>
+            </LandingReveal>
+
+            {/* 3 Quick Pillars for Judges */}
+            <div className="mx-auto mt-8 grid max-w-[960px] gap-4 sm:grid-cols-3">
+              <div className="rounded-xl border border-white/10 bg-[#0F2236]/60 p-4 backdrop-blur-sm">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-amber-300">
+                  01 · The Challenge
+                </p>
+                <p className="mt-1 text-[13px] font-medium text-white">
+                  Flame in Freefall
+                </p>
+                <p className="mt-1 text-[12px] leading-5 text-slate-400">
+                  Addresses microgravity combustion, droplet extinguishment, and atmospheric flammability.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-[#0F2236]/60 p-4 backdrop-blur-sm">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-sky-300">
+                  02 · Evidence Provenance
+                </p>
+                <p className="mt-1 text-[13px] font-medium text-white">
+                  37 NASA Experiment Records
+                </p>
+                <p className="mt-1 text-[12px] leading-5 text-slate-400">
+                  Every data point is tied to NASA PSI investigations with full review depth notes.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-[#0F2236]/60 p-4 backdrop-blur-sm">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-emerald-300">
+                  03 · Honest Boundaries
+                </p>
+                <p className="mt-1 text-[13px] font-medium text-white">
+                  Zero Hallucinations
+                </p>
+                <p className="mt-1 text-[12px] leading-5 text-slate-400">
+                  Empirical limits are kept strictly separate from flight rules, with explicit gap indicators.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* TRUST STRIP */}

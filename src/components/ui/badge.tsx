@@ -9,7 +9,8 @@ export type BadgeVariant =
   | 'emerald'
   | 'warning'
   | 'error'
-  | 'violet';
+  | 'violet'
+  | 'amber';
 
 const BADGE_VARIANTS: Record<BadgeVariant, string> = {
   default:
@@ -28,6 +29,8 @@ const BADGE_VARIANTS: Record<BadgeVariant, string> = {
     'bg-[#DC2626]/10 text-[#DC2626] border-[#DC2626]/28',
   violet:
     'bg-[#7C3AED]/10 text-[#7C3AED] border-[#7C3AED]/28',
+  amber:
+    'bg-[#D97706]/10 text-[#D97706] border-[#D97706]/28',
 };
 
 export interface BadgeProps extends React.ComponentProps<'span'> {

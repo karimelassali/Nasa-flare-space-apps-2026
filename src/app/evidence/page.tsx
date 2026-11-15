@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import { ExternalLink, Eye, RotateCcw } from 'lucide-react';
 import { getAllEvidenceRecords } from '@/lib/evidence/repository';
+import { getPsiCorpusSummary } from '@/lib/evidence/psi-dataset';
 import {
   buildCoverageHeatmap,
   buildInvestigationDistribution,
@@ -24,9 +25,11 @@ import {
 import { formatCompactParam } from '@/lib/utils';
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { GravityCrossoverPanel } from '@/components/evidence/GravityCrossoverPanel';
 import { Button } from '@/components/ui/button';
 import { EvidenceHeatmap } from '@/components/evidence/EvidenceHeatmap';
+import { PsiGasDropletExplorer } from '@/components/evidence/PsiGasDropletExplorer';
 import { ResearchGapExplorer } from '@/components/evidence/ResearchGapExplorer';
 import { ExperimentDetailsDrawer } from '@/components/knowledge/ExperimentDetailsDrawer';
 import { EmptyState } from '@/components/ui/EmptyState';
@@ -34,6 +37,8 @@ import type { EvidenceRecord } from '@/types/flare';
 
 export default function EvidenceAndGapsPage() {
   const allRecords = useMemo(() => getAllEvidenceRecords(), []);
+  const psiSummary = useMemo(() => getPsiCorpusSummary(), []);
+  const [corpusView, setCorpusView] = useState<'curated' | 'psi'>('curated');
 
   const [investigationFilter, setInvestigationFilter] = useState('All');
   const [platformFilter, setPlatformFilter] = useState('All');
@@ -170,19 +175,38 @@ export default function EvidenceAndGapsPage() {
     <div className="flex flex-col gap-6">
       {/* Header + Tremor KPI Strip */}
       <Card className="p-5 sm:p-6 gap-5">
-        <div className="flex flex-col gap-1.5 max-w-3xl">
-          <div className="flex items-center gap-2">
-            <Badge variant="cyan">Corpus Coverage &amp; Research Gap Matrix</Badge>
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div className="flex flex-col gap-1.5 max-w-3xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="cyan">Corpus Coverage &amp; Research Gap Matrix</Badge>
+              <Badge variant="warning">
+                +{psiSummary.totalRows} NASA PSI Gas/Droplet Rows
+              </Badge>
+            </div>
+            <h2 className="font-display text-2xl font-semibold text-[#0F172A]">
+              Evidence Explorer
+            </h2>
+            <p className="text-sm text-[#334155] leading-relaxed">
+              Every count and completeness ratio below is computed directly from FLARE&apos;s {allRecords.length} curated multi-investigation records and {psiSummary.totalRows} NASA PSI gas/droplet rows (ACME, CFI, SPICE), kept strictly separate. Unpopulated cells indicate absence in the loaded corpus—not negative safety evidence.
+            </p>
           </div>
-          <h2 className="font-display text-2xl font-semibold text-[#0F172A]">
-            Evidence Explorer
-          </h2>
-          <p className="text-sm text-[#334155] leading-relaxed">
-            Every count and completeness ratio below is computed directly from the {allRecords.length} loaded NASA PSI and NTRS records. Unpopulated cells indicate absence in the currently loaded corpus—not negative safety evidence.
-          </p>
+
+          <Tabs
+            value={corpusView}
+            onValueChange={(v) => setCorpusView(v as 'curated' | 'psi')}
+          >
+            <TabsList>
+              <TabsTrigger value="curated">
+                Curated Corpus ({allRecords.length})
+              </TabsTrigger>
+              <TabsTrigger value="psi">
+                NASA PSI Gas &amp; Droplet ({psiSummary.totalRows})
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 pt-4 border-t border-[#F1F5F9]">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3.5 pt-4 border-t border-[#F1F5F9]">
           <div className="rounded-lg bg-[#F8FAFC] border border-[#F1F5F9] p-3.5">
             <div className="text-xs text-[#64748B]">Active Corpus Slice</div>
             <div className="font-mono-telemetry text-xl font-semibold text-[#0F172A] mt-1">
@@ -213,8 +237,22 @@ export default function EvidenceAndGapsPage() {
               </span>
             </div>
           </div>
+          <div className="rounded-lg bg-[#F8FAFC] border border-[#F1F5F9] p-3.5">
+            <div className="text-xs text-[#64748B]">NASA PSI Gas/Droplet</div>
+            <div className="font-mono-telemetry text-xl font-semibold text-[#0284C7] mt-1">
+              {psiSummary.totalRows}{' '}
+              <span className="text-xs font-normal text-[#64748B]">
+                ({psiSummary.uniqueRows} unique)
+              </span>
+            </div>
+          </div>
         </div>
       </Card>
+
+      {corpusView === 'psi' ? (
+        <PsiGasDropletExplorer />
+      ) : (
+        <>
 
       {/* Filters Card */}
       <Card data-tour="evidence-filters">
@@ -634,6 +672,8 @@ export default function EvidenceAndGapsPage() {
       <div data-tour="evidence-crossover">
         <GravityCrossoverPanel />
       </div>
+        </>
+      )}
 
       <ExperimentDetailsDrawer
         record={inspectedRecord}

@@ -14,6 +14,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { IgnisVisualizer } from '@/components/ignis/IgnisVisualizer';
 import { IgnisBoundaryPanel } from '@/components/ignis/IgnisBoundaryPanel';
+import { SameRowVerdictPanel } from '@/components/evidence/SameRowVerdictPanel';
 import { FireSafetyQuiz } from '@/components/ignis/FireSafetyQuiz';
 import { ExperimentDetailsDrawer } from '@/components/knowledge/ExperimentDetailsDrawer';
 import type {
@@ -286,6 +287,8 @@ export default function IgnisLabPage() {
         rankedResults={rankedResults}
         onInspectRecord={(rec) => setInspectedRecord(rec)}
       />
+
+      <SameRowVerdictPanel />
 
       <div data-tour="ignis-quiz">
         <FireSafetyQuiz

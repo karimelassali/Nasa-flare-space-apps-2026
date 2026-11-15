@@ -136,3 +136,67 @@ export const AIAnalysisResponseSchema = z.object({
   claims: z.array(z.object({ recordId: z.string(), field: z.string(), label: z.string(), text: z.string(), sourceUrl: z.string().url() })).optional(),
   recordConditions: z.array(z.object({ recordId: z.string(), text: z.string() })).optional(),
 });
+
+export const PsiGasDropletTestSchema = z.object({
+  id: z.string().min(1),
+  investigation: z.enum(['ACME', 'CFI', 'SPICE']),
+  campaign: z.string().min(1),
+  platform: PlatformSchema,
+  facility: z.string().min(1),
+  fuel: z.string().min(1),
+  fuelPhase: z.enum(['gas', 'liquid']),
+  geometry: z.string().min(1),
+  sizeMm: z.number().nullable(),
+  oxygenPercent: z.number().min(0).max(100).nullable(),
+  pressureKpa: z.number().positive().nullable(),
+  airflowCms: z.number().nullable(),
+  diluent: z.string().min(1),
+  gravityContext: GravityContextSchema,
+  outcome: z.string().nullable(),
+  keyMetricName: z.string().nullable(),
+  keyMetricValue: z.number().nullable(),
+  keyMetricUnit: z.string().nullable(),
+  sourceFile: z.string().min(1),
+  sourceRow: z.number().int().positive(),
+  sourceUrl: z.string().url(),
+  flags: z.array(z.string()),
+  notes: z.string().min(1),
+});
+
+export const PsiGasDropletCorpusSchema = z.array(PsiGasDropletTestSchema);
+
+export const SolidOutcomeSchema = z.enum(['Burned', 'Mixed', 'No Flame']);
+export const SolidVerdictSchema = z.enum(['Burned', 'Mixed', 'No Flame', 'No Data']);
+
+export const SolidTestRecordSchema = z.object({
+  id: z.string().min(1),
+  testCode: z.string().min(1),
+  material: z.enum(['PMMA Acrylic', 'SIBAL Fabric', 'Nomex III']),
+  materialLabel: z.string().min(1),
+  investigation: z.string().min(1),
+  tableRef: z.string().min(1),
+  printedPage: z.string().min(1),
+  sourceFile: z.string().min(1),
+  sourceRow: z.number().int().positive(),
+  sourceUrl: z.string().url(),
+  doi: z.string().nullable(),
+  oxygenInitialPct: z.number().min(0).max(100).nullable(),
+  oxygenFinalPct: z.number().min(0).max(100).nullable(),
+  oxygenRangePct: NumericRangeSchema.nullable(),
+  pressureKpa: z.number().positive().nullable(),
+  airflowCms: z.number().min(0).max(500).nullable(),
+  airflowRangeCms: NumericRangeSchema.nullable(),
+  thicknessMm: z.number().positive().nullable(),
+  widthCm: z.number().positive().nullable(),
+  flowDirection: z.enum(['Opposed', 'Concurrent']).nullable(),
+  gravityContext: GravityContextSchema,
+  spreadRateMmS: z.array(z.number()).nullable(),
+  burnDurationMin: z.number().nonnegative().nullable(),
+  outcome: SolidOutcomeSchema,
+  rawComment: z.string().nullable(),
+  reusedSample: z.boolean(),
+  o2Uncertain: z.boolean(),
+  limitations: z.array(z.string().min(1)).min(1),
+});
+
+export const SolidTestCorpusSchema = z.array(SolidTestRecordSchema);
