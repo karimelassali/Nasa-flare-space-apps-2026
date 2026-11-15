@@ -116,13 +116,22 @@ export function WorkspaceShowcase() {
                 }
               }}
               className={`landing-tab inline-flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2 text-[12px] font-semibold transition ${
-                selected
-                  ? 'bg-[#102234] text-white shadow-sm'
-                  : 'text-slate-600 hover:bg-white hover:text-[#102234]'
+                item.id === 'agent'
+                  ? selected
+                    ? 'bg-[#EA580C] text-white shadow-sm ring-2 ring-[#FDBA74]'
+                    : 'bg-[#FFF7ED] text-[#9A3412] ring-1 ring-[#FDBA74] hover:bg-[#FFEDD5]'
+                  : selected
+                    ? 'bg-[#102234] text-white shadow-sm'
+                    : 'text-slate-600 hover:bg-white hover:text-[#102234]'
               }`}
             >
-              <TabIcon className={`h-3.5 w-3.5 ${selected ? 'text-orange-300' : 'text-slate-400'}`} />
+              <TabIcon className={`h-3.5 w-3.5 ${item.id === 'agent' ? 'text-[#EA580C]' : selected ? 'text-orange-300' : 'text-slate-400'}`} />
               {item.label}
+              {item.id === 'agent' ? (
+                <span className={`rounded-full px-1.5 py-0.5 text-[9px] font-bold tracking-wide ${selected ? 'bg-white text-[#EA580C]' : 'bg-[#EA580C] text-white'}`}>
+                  AI
+                </span>
+              ) : null}
             </button>
           );
         })}
